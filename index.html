@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <meta name="description" content="This is an example website for tinywebsites.co.uk">
+    <title>Moritz Reitz | Web Development in Glasgow</title>
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="loadMenu(), ctaButton(), animation()">
+    <header >
+        <div class="container">
+            <div class="header__row">
+                <div class="logo">
+                    <span class="logo__name">Moritz Reitz</span>
+                    <span class="logo__title ">Freelance Web Developer</span>
+                </div>
+                <nav id="site-navigation" class="menu">
+                    <button id="menu-btn" class="menu__btn" aria-label="Open main menu">
+                        <div ></div>
+                        <div></div>
+                        <div></div>
+                    </button>
+                    <ul class="menu__ul no-list-style">
+                        <li class="menu__li">
+                            <button class="nav__btn">Service</button>
+                        </li>
+                        <li class="menu__li">
+                            <button class="nav__btn">Portfolio</button>
+                        </li>
+                        <li class="menu__li">
+                            <button class="nav__btn">About</button>
+                        </li>
+                        <li class="menu__li">
+                            <button class="nav__btn">Contact</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="sec--hero t-center animate" >
+            <div class="container">
+                <h1 class="text-shadow hero__title">
+                    <span>Demo website</span>
+                    <span class="subtitle">for tinywebsites.co.uk</span>
+                </h1>
+                <p class="text-shadow highlight">Affordable website for freelancers</p>
+            </div>
+        </section>
+        <!-- <section id="services" class="sec--services">
+            <div class="container t-center">
+                <h2 class="animate">Services</h2>
+                <ul class="no-list-style grid"> 
+                    <li class="service-card clickable-parent animate">
+                        <div class="service-card__img-wrap">
+                            <img class="service-card__img" src="./media/pexels-divinetechygirl-1181244.webp" alt="Web Developent services by Moritz Reitz" loading="lazy">
+                        </div>
+                        <div class="service-card__content">
+                            <h2 class="service-card__title h-300">Service 1</h2>
+                            <p class="service-card__desc">Small but effective websites for freelancers.</p>
+                            <a class="service-card__cta cta" href="#contact">Start site</a>
+                        </div>
+                    </li>
+                    <li class="service-card clickable-parent animate">
+                        <div class="service-card__img-wrap">
+                            <img class="service-card__img" src="./media/pexels-divinetechygirl-1181244.webp" alt="SEO" loading="lazy">
+                        </div>
+                        <div class="service-card__content">
+                            <h2 class="service-card__title h-300">Service 2</h2>
+                            <p class="service-card__desc">Hike up the search rankings with a dedicated website</p>
+                            <a class="service-card__cta cta" href="#contact">Improve ranking</a>
+                        </div>
+                    </li>
+                    <li class="service-card clickable-parent animate">
+                        <div class="service-card__img-wrap">
+                            <img class="service-card__img" src="./media/pexels-divinetechygirl-1181244.webp" alt="Web Developent services by Moritz Reitz" loading="lazy">
+                        </div>
+                        <div class="service-card__content">
+                            <h2 class="service-card__title h-300">Serice 3</h2>
+                            <p class="service-card__desc">Generate new customers with Search Ads</p>
+                            <a class="service-card__cta cta" href="#contact">Generate customers</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="portfolio" class="sec--portfolio animate">
+            <div class="container">
+                <h2>My Work:</h2>
+                <ul class="portfolio-grid grid grid--3 grid--lines no-list-style gap-xl">
+                    <li class="portfolio-card clickable-parent">
+                        <div class="portfolio-card__img-wrap">
+                            <img src="media/mack_and_rose_portfolio_project.webp" alt="Homepage screenshot mackandrose.com" loading="lazy">
+                        </div>
+                        <a class="cta" href="https://mackandrose.com" target="_blank">View mackandrose.com</a>
+                    </li>
+                    <li class="portfolio-card clickable-parent">
+                        <div class="portfolio-card__img-wrap">
+                            <img src="media/ADHD Direct portfolio.webp" alt="Homepage screenshot adhddirect.co.uk" loading="lazy">
+                        </div>
+                        <a class="cta" href="https://adhddirect.co.uk" target="_blank">View adhddirect.co.uk</a>
+                    </li>
+                    <li class="portfolio-card clickable-parent">
+                        <div class="portfolio-card__img-wrap">
+                            <img src="media/beboldphotography portfolio project.webp" alt="Homepage screenshot beboldphotography.co.uk" loading="lazy">
+                        </div>
+                        <a class="cta" href="https://beboldphotography.co.uk" target="_blank">View beboldphotography.com</a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section id="about" class="sec--about animate">
+            <div class="container">
+                <div class="columns columns--even gap-xl">
+                    <div>
+                        <img class="sticky-t-0" src="media/Moritz Reitz headshot.webp" alt="Moritz Reitz Headshot">                
+                    </div>
+                    <div>                
+                        <div class="sticky-t-5 gap-xl flex-col">
+                            <h2 class="t-left:tab">About Me</h2>
+                            <div class="">
+                                <p class="">Hi, I'm Moritz – a web developer based in Glasgow with over 5 years of experience building fast, functional websites that are easy to manage. I specialise in WordPress development and enjoy helping individuals and small businesses get online with confidence.</p>
+                                <p>I recently launched tinywebsites.com – a startup offering affordable, one-page websites for freelancers. Each site is hosted for free on Netlify, making it a low-cost and hassle-free solution. All you need is a GitHub and Netlify account – we handle the rest.</p>
+                                <p>Whether you're after a simple site that can be deployed within a week, a professionally designed layout, or need SEO support to help get found online, you can book a range of services to suit your goals.</p>
+                                <p>At tinywebsites.com, getting
+                                your own website is quick, affordable, and tailored to what you need.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section id="contact" class="sec--contact animate">
+            <div class="container">
+                <div class="columns columns--even">
+                    <div class="flex-col gap-s justify-center">     
+                        <div class="contact__content gap-s flex-col">
+                            <h2 class="t-left:tab">Contact Me</h2>
+                            <p class="mw-30">Get in touch with me to kickstart your web project. You can give me a call on <a href="tel:+44123456789">+44 1234 56789</a> or email me at <a href="mailto:contact@moritzreitz.com">contact@moritzreitz.com</a></p>
+                        </div>           
+                    </div>
+                    <div>
+                        <form id="contact-form" class="form" action="" name="contact-form" onsubmit="sendForm()">
+                            <div class="f__row">
+                                <label class="f__label" for="f-name">First Name:
+                                    <input placeholder="first name" name="f-name" class="f__input" type="text" autocomplete="given-name" required>
+                                </label> 
+                                <label class="f__label" for="l-name">Last Name:
+                                    <input placeholder="last name" name="l-name" class="f__input" type="text" required>
+                                </label> 
+                            </div>
+                            <div class="f__row">
+                                <label class="f__label" for="email">Email:
+                                    <input placeholder="email" name="email" class="f__input" type="name" autocomplete="email" required>
+                                </label> 
+                                <label class="f__label" for="phone" required>Phone:
+                                    <input placeholder="phone number" name="phone" class="f__input" type="tel" autocomplete="tel" required>
+                                </label> 
+                            </div>
+                            <div class="f__row">
+                                <label class="f__label" for="message">Your Message:
+                                    <textarea placeholder="how can I help you?.." rows="3" class="f__input" type="text" name="message"  required></textarea>
+                                </label> 
+                            </div>
+                            <div class="f__row">
+                                <label class="f__label" for="gdpr" required>
+                                    <input class="f__input" type="checkbox" name="gdpr" required> 
+                                    I consent to Moritz Reitz storing the data I submitted & contacting me regarding my enquiry.
+                                </label> 
+                            </div>
+                            <input class="btn" type="submit" value="send message">
+                            <div id="success">
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <div class="container">
+            <p>Website by <a href="https://tinywebsite.co.uk">tinywebsite.co.uk</a></p>
+            <p>&copy Moritz Reitz</p>
+        </div>
+    </footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

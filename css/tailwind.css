@@ -1,0 +1,135 @@
+/*grid styles*/
+.grid {
+    display: grid;
+    grid-template-columns: var(--grid-col-s);
+    gap: var(--space-m)
+  }
+  .grid--s {
+    grid-template-columns: var(--grid-col-s);
+    gap: var(--space-s);
+    width: 100%;
+  }
+  .grid--l {
+    grid-template-columns: var(--grid-col);
+    gap: var(--space-m);
+    width: 100%;
+  }
+  .grid--l{
+    display: grid;
+    grid-template-columns: var(--grid-col-l);
+    gap: var(--space-l);
+    width: 100%;
+  }
+  @media only screen and (min-width: 950px){
+    .grid--2 {
+      grid-template-columns: 1fr 1fr;
+    }
+    .grid--3 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .grid--4 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+/* maximum width */
+  .mw-10{
+    max-width: 10rem;
+  }
+  .mw-20{
+    max-width: 20rem;
+  }
+  .mw-30{
+    max-width: 30rem;
+  }
+  .mw-40{
+    max-width: 40rem;
+  }
+/* spacing */
+/* width utilities */
+.w-full{
+    width:100%;
+}
+/* height utilities */
+.h-full{
+  height: 100%;
+}
+.mw-50{
+  max-width: 50rem;
+}
+.mw-60{
+  max-width: 60rem;
+}
+.mw-70{
+  max-width: 70rem;
+}
+.mw-80{
+  max-width: 80rem;
+}
+.mw-90{
+  max-width: 90rem;
+}
+/* gap utilities */
+.gap-3xs{ 
+  gap: var(--space-3xs);
+}
+.gap-2xs{ 
+  gap: var(--space-2xs);
+}
+.gap-xs{ 
+  gap: var(--space-s);
+}
+.gap-s{ 
+  gap: var(--space-s);
+}
+.gap-m{ 
+  gap: var(--space-m);
+}
+.gap-l{ 
+  gap: var(--space-l);
+}
+.gap-xl{ 
+  gap: var(--space-xl);
+}
+.gap-2xl{ 
+  gap: var(--space-2xl);
+}
+.gap-3xl{ 
+  gap: var(--space-3xl);
+}
+/* font styles */
+.t-center{
+    text-align: center;
+}
+
+@media only screen and (min-width: 950px){
+    .t-left\:tab{
+        text-align: left;
+    }
+}
+/* sticky styles */
+.sticky-t-0{
+    position: sticky;
+    top:0
+}
+.sticky-t-5{
+    position: sticky;
+    top:5rem
+}
+.sticky-t-10{
+    position: sticky;
+    top:10rem;
+}
+
+.flex{
+  display: flex;
+}
+.flex-col{
+  display:flex;
+  flex-direction: column;
+}
+.justify-center{
+  justify-content: center;
+}
+.align-center{
+  align-items: center;
+}

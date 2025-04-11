@@ -1,0 +1,233 @@
+/* Theme styles */
+/* breakpoints 750px and 950px */
+:root {
+/* @link https://utopia.fyi/type/calculator?c=300,15,1.2,1140,17,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* Font sizes*/
+  --fs-100: clamp(.9rem, 0.8rem + 0.331vw, 1.1rem);
+  --fs-300: clamp(1.35rem, 1.2392rem + 0.5908vw, 1.6602rem);
+  --fs-400: clamp(1.62rem, 1.4574rem + 0.867vw, 2.0752rem);
+  --fs-500: clamp(1.944rem, 1.7119rem + 1.2381vw, 2.594rem);
+  --fs-600: clamp(2.3328rem, 2.0079rem + 1.7327vw, 3.2425rem);
+  
+/*Font Styles*/
+  --ff-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
+  --ff-titles: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
+  
+/*Spacings*/
+  --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
+  --space-2xs: clamp(0.5rem, 0.4777rem + 0.119vw, 0.5625rem);
+  --space-xs: clamp(0.6875rem, 0.6429rem + 0.2381vw, 0.8125rem);
+  --space-s: clamp(0.9375rem, 0.8929rem + 0.2381vw, 1.0625rem);
+  --space-m: clamp(1.4375rem, 1.3705rem + 0.3571vw, 1.625rem);
+  --space-l: clamp(1.875rem, 1.7857rem + 0.4762vw, 2.125rem);
+  --space-xl: clamp(2.8125rem, 2.6786rem + 0.7143vw, 3.1875rem);
+  --space-2xl: clamp(3.75rem, 3.5714rem + 0.9524vw, 4.25rem);
+  --space-3xl: clamp(5.625rem, 5.3571rem + 1.4286vw, 6.375rem);
+/* section spacings */
+  --space-sect--ver: var(--space-3xl);
+  --space-sect--hor: var(--space-xs);
+/*Grid styles*/
+  --grid-col-s: repeat(auto-fit, minmax( min(14rem, 100%) , 1fr));
+  --grid-col: repeat(auto-fit, minmax( min(17rem, 100%) , 1fr));
+  --grid-col-l: repeat(auto-fit, minmax( min(20rem, 100%) , 1fr));
+/* Colours */
+  --col-dark: hsl(240, 4%, 10%);            /* #19191b */
+  --col-dark-20: hsl(240, 4%, 20%);    
+  --col-dark-30: hsl(240, 4%, 30%);     
+  --col-dark-40: hsl(240, 4%, 40%);      
+  --col-dark-50: hsl(240, 4%, 50%);    
+  --col-dark-60: hsl(240, 4%, 60%);        
+  --col-dark-70: hsl(240, 4%, 70%);    
+  --col-dark-80: hsl(240, 4%, 80%);      
+  --col-dark-90: hsl(240, 4%, 90%);          
+  --col-light: hsl(240, 4%, 95%);            
+  /* --col-light:   hsl(0, 0%, 96%);             #f5f5f5 */
+  --col-primary: hsl(72, 100%, 49%); /* #d5fb00 */
+  --col-secondary: hsl(312, 70%, 62%);  /* #de60ca */
+  --col--bg: var(--col-dark);
+  --col--txt: var(--col-light);
+  /*Transparent Overlay Colours*/
+  --col-light--trans-50: hsl(0, 0%, 97.3%, .5) ;
+  --col-dark-trans-10: hsl(240, 4%, 10%, .1);
+  --col-dark-trans-50: hsl(240, 4%, 10%, .5); 
+  /*button*/
+  --btn-padding:  var(--space-xs) var(--space-l) ;
+  --btn-radius: .2em;
+  }
+  body{
+    font-family:var(--ff-body);
+    font-size: var(--fs-100);
+    color: var(--col--txt);
+    background: var(--col--bg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+  }
+  h1, h2, h3, h4, h5, h6 { 
+    font-family: var(--ff-titles);
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h1, .h-600 { 
+    font-size: var(--fs-600);
+  }
+  h2, .h-500 { 
+    font-size: var(--fs-500);
+  }
+  h3, .h-400 { 
+    font-size: var(--fs-400);
+  }
+  h4, .h-300 { 
+    font-size: var(--fs-300);
+  }
+
+
+/* contact element */
+    .contact{ 
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        justify-content: center; 
+      
+      }
+        .contact__item{ 
+          display: flex;
+          flex-shrink: 0;
+          padding: var(--space-s);
+        }
+          .contact__txt{
+            font-weight: 700;
+            font-size:1.1em;
+          }
+.menu__ul  {
+  background: var(--col--bg);
+}
+/*Link styles*/
+a {
+  color: var(--col-primary);
+}
+/* Form styles */
+.form {
+  padding: var(--space-m);
+}
+  .f__label:has(:not([type="checkbox"]):not([type="radio"]))  {
+    color: transparent;
+  }
+    .f__input{
+      background: none;
+      border: solid var(--col-light);
+      border-width: 0 0 1px 0;
+      color: var(--col--txt)
+    }
+    .f__input::placeholder{
+      color: var(--col-dark-50);
+    }
+    .form input.btn{
+      margin-right: 0;
+      margin-top: var(--space-s)
+    }
+/*button styles*/
+.btn{
+  border: 1px solid var(--col-light);
+  background-color: transparent;
+  padding: var(--btn-padding);
+  font-weight: 700;
+  line-height: 1;
+}
+.cta {
+  text-transform: capitalize;
+  transition: .4s ease-in-out;
+}
+  .cta svg{
+    margin : 0 5px 0 4px;
+    transform: translateY(1px);
+    transition: .4s ease-in-out;
+  } 
+  .cta:hover svg{
+    margin:  0  10px -1px 10px;
+    transform: rotate(45deg);
+  }
+/* Animation */
+.animate  {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity .7s ease-in-out, transform .7s ease-in-out;
+  will-change: transform, opacity;
+}
+/* When the element is in view */
+.animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Header styles */
+header { 
+  position: fixed;
+  top:0;
+  width:100%;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  transition: .4s ease-in-out;
+}
+.shrink .logo{
+  font-size: var(--fs-300)
+
+}
+.shrink .menu__btn {
+  transform: scale(.7);
+  margin: 0;
+  }
+  
+
+
+/* Hero section */
+.sec--hero{
+  background: linear-gradient(var(--col-dark), var(--col-dark-trans-50), var(--col-dark)), url("/media/glasses\ on\ mackbook\ by\ Kevin\ ku\ -\ Pexels.webp");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: 100% auto;
+}
+/*Services Section*/
+.service-card{
+  transition: .4s ease-in-out;
+}
+.service-card:hover{
+  transform: translateY(-5px);
+  box-shadow:  0 0 0px 2px var(--col-light);
+}
+  .service-card__content  {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-m);
+    gap: var(--space-s)
+  }
+/* About Section */
+.sec--about p{
+  padding-bottom: .5em;
+}
+/* Portfolio Section */
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+  .portfolio-card .cta{
+    text-align: right;
+    text-transform: unset;
+    transition: .4s ease-in-out;
+  }  
+  .portfolio-card__img-wrap{
+    overflow: hidden;
+  }
+  .portfolio-card img {
+    transition: .4s ease-in-out;
+  }
+    .portfolio-card:hover img {
+      transform: scale(1.1)
+    }
+/* Contact Section */
+
+/* Footer */
+footer{
+  border-top: 1px solid var(--col-dark-50);
+}
