@@ -178,6 +178,14 @@ header {
   margin: 0;
   }
   
+  .sec--dark{
+    color: var(--col-light); 
+    background: var(--col-dark);
+  }
+  .sec--light {
+    background-color: var(--col-light); 
+    color: var(--col-dark)
+  }
 
 
 /* Hero section */

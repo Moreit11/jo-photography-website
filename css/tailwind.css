@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/*grid styles*/
+/* Grid styles */
 .grid {
     display: grid;
     grid-template-columns: var(--grid-col-s);
