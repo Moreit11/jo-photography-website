@@ -27,6 +27,16 @@ html {
 input, button, textarea, select {
   font: inherit;
 }
+/*clickable parent*/
+.clickable-parent {
+  position: relative;
+}
+  .clickable-parent a::before, .clickable-parent button::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    z-index: 1000;
+  }
 /*Column styles*/
 .columns{
   display: flex;
@@ -45,15 +55,6 @@ input, button, textarea, select {
     order:-1;
 
   }
-.clickable-parent {
-  position: relative;
-}
-  .clickable-parent a::before, .clickable-parent button::before {
-    position: absolute;
-    inset: 0;
-    content: '';
-    z-index: 1000;
-  }
 @media only screen and (max-width: 750px)  {
   .columns  {
     flex-direction: column;
@@ -64,13 +65,7 @@ input, button, textarea, select {
   }
   .columns--swap:nth-of-type(2n) > *:nth-child(2n) {
     order: unset;
-
   }
-}
-.no-list-style {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 /* remove link styles */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .no-link, .no-link a, a.btn, a.cta { 
@@ -261,11 +256,10 @@ h1:has(.subtitle), h2:has(.subtitle){
   --line-offset: calc(var(--gap) / 2);
   --line-thickness: 1px;
   --line-color: var(--col-dark-30);
-
   overflow: hidden; /*hides lines on top and bottom as well as left and right*/
   gap: var(--gap)
 }
-  .grid--lines > *{
+  .grid--lines > * {
     position: relative;
   }
     .grid--lines > *:before,
