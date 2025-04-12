@@ -32,18 +32,18 @@
   --grid-col-l: repeat(auto-fit, minmax( min(20rem, 100%) , 1fr));
 /* Colours */
   --col-dark: hsl(240, 4%, 10%);            /* #19191b */
-  --col-dark-20: hsl(240, 4%, 20%);    
-  --col-dark-30: hsl(240, 4%, 30%);     
-  --col-dark-40: hsl(240, 4%, 40%);      
-  --col-dark-50: hsl(240, 4%, 50%);    
-  --col-dark-60: hsl(240, 4%, 60%);        
-  --col-dark-70: hsl(240, 4%, 70%);    
-  --col-dark-80: hsl(240, 4%, 80%);      
-  --col-dark-90: hsl(240, 4%, 90%);          
-  --col-light: hsl(240, 4%, 95%);            
-  /* --col-light:   hsl(0, 0%, 96%);             #f5f5f5 */
-  --col-primary: hsl(72, 100%, 49%); /* #d5fb00 */
-  --col-secondary: hsl(312, 70%, 62%);  /* #de60ca */
+  --col-80:   hsl(240, 4%, 20%);    
+  --col-70:   hsl(240, 4%, 30%);     
+  --col-60:   hsl(240, 4%, 40%);      
+  --col-50:   hsl(240, 4%, 50%);    
+  --col-40:   hsl(240, 4%, 60%);        
+  --col-30:   hsl(240, 4%, 70%);    
+  --col-20:   hsl(240, 4%, 80%);      
+  --col-10:   hsl(240, 4%, 90%);          
+  --col-light:hsl(240, 4%, 95%);            
+
+  --col-primary: hsl(213, 94%, 67%); /* #60A5FA */
+  --col-secondary: hsl(45, 97%, 60%);  /* #FBBF24 */
   --col--bg: var(--col-dark);
   --col--txt: var(--col-light);
   /*Transparent Overlay Colours*/
