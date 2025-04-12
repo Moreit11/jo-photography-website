@@ -48,6 +48,9 @@ input, button, textarea, select {
 section:has(.columns--img){
   position:relative;
 }
+  .columns--img > *:has(:not(img)) > *{
+    z-index: 1;
+  }
   .columns--img img {
     position: absolute;
     inset: 0;

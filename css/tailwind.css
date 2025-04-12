@@ -103,6 +103,9 @@
 .t-center{
     text-align: center;
 }
+.t-shadow-dark {
+  text-shadow: 0 0 10px var(--col-dark) ;
+}
 
 @media only screen and (min-width: 950px){
     .t-left\:tab{
