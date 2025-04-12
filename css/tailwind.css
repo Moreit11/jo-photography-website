@@ -49,23 +49,26 @@
 .w-full{
     width:100%;
 }
-/* height utilities */
+/* sizing utilities */
 .h-full{
   height: 100%;
 }
-.mw-50{
+.min-h-screen{
+  min-height: 100vh;
+}
+.min-w-50{
   max-width: 50rem;
 }
-.mw-60{
+.min-w-60{
   max-width: 60rem;
 }
-.mw-70{
+.min-w-70{
   max-width: 70rem;
 }
-.mw-80{
+.min-w-80{
   max-width: 80rem;
 }
-.mw-90{
+.min-w-90{
   max-width: 90rem;
 }
 /* gap utilities */
@@ -119,7 +122,7 @@
     position: sticky;
     top:10rem;
 }
-
+/*lex classes*/
 .flex{
   display: flex;
 }

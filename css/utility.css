@@ -45,15 +45,22 @@ input, button, textarea, select {
   flex-wrap: nowrap;
   gap: var(--space-xs);  
 }
+section:has(.columns--img){
+  position:relative;
+}
+  .columns--img img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+  }
   .columns--even > *  {
     flex: 1 1 300px;
   }
-  .columns--swap:nth-of-type(2n) {
-
-  }
   .columns--swap:nth-of-type(2n) > *:nth-child(2n) {
     order:-1;
-
   }
 @media only screen and (max-width: 750px)  {
   .columns  {
@@ -72,7 +79,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .no-link, .no-link a, a.btn, a.cta {
   color: inherit;
   text-decoration: inherit;
 }
-
+/*Section styles*/
 section:has(.container)  { 
   padding: var(--space-sect--ver) var(--space-sect--hor);
   display: flex;

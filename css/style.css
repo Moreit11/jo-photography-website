@@ -59,9 +59,6 @@
     font-size: var(--fs-100);
     color: var(--col--txt);
     background: var(--col--bg);
-    background-position: center;
-    background-repeat: repeat;
-    background-size: auto;
   }
   h1, h2, h3, h4, h5, h6 { 
     font-family: var(--ff-titles);
@@ -79,8 +76,6 @@
   h4, .h-300 { 
     font-size: var(--fs-300);
   }
-
-
 /* contact element */
     .contact{ 
         display: flex;
@@ -184,20 +179,11 @@ header {
     background-color: var(--col-light); 
     color: var(--col-dark)
   }
-
-
-/* Hero section */
-.sec--hero{
-  background: linear-gradient(var(--col-dark), var(--col-dark-trans-50), var(--col-dark)), url("/media/glasses\ on\ mackbook\ by\ Kevin\ ku\ -\ Pexels.webp");
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  background-size: 100% auto;
-}
-/*Services Section*/
-.service-card{
+/*hover effects*/
+.card\:hover-up{
   transition: .4s ease-in-out;
 }
-.service-card:hover{
+.card\:hover-up{
   transform: translateY(-5px);
   box-shadow:  0 0 0px 2px var(--col-light);
 }
@@ -207,10 +193,7 @@ header {
     padding: var(--space-m);
     gap: var(--space-s)
   }
-/* About Section */
-.sec--about p{
-  padding-bottom: .5em;
-}
+
 /* Portfolio Section */
 .portfolio-card {
   display: flex;
@@ -232,7 +215,6 @@ header {
       transform: scale(1.1)
     }
 /* Contact Section */
-
 /* Footer */
 footer{
   border-top: 1px solid var(--col-dark-50);
