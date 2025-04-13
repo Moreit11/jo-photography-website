@@ -102,6 +102,12 @@ a {
 }
 /* Form styles */
 .form {
+  --light-border: solid var(--col-30);
+  --dark-border: solid var(--col-70);
+  --light-input: solid var(--col-30);
+  --dark-input: solid var(--col-70);
+  --light-placeholder: solid var(--col-30);
+  --dark-placeholder: solid var(--col-70);
   padding: var(--space-m);
 }
   .f__label:has(:not([type="checkbox"]):not([type="radio"]))  {
@@ -111,10 +117,16 @@ a {
       background: none;
       border: solid var(--col-light);
       border-width: 0 0 1px 0;
-      color: var(--col--txt)
+      color: var(--col--txt);
+    }
+    .light .f__input{
+      color: var(--dark-input);
+    }
+    .dark .f__input{
+      color: var(--light-input);
     }
     .f__input::placeholder{
-      color: var(--col-dark-50);
+      color: var(--col-50);
     }
     .form input.btn{
       margin-right: 0;

@@ -1,11 +1,11 @@
-//menu animation
-function loadMenu() {
-    const menuBtn = document.getElementById("menu-btn")
-    const navElement = document.getElementById("site-navigation");
-    menuBtn.addEventListener('click', ()=> {
-        navElement.classList.toggle('menu--active')
-    })
-}
+// //menu animation
+// function loadMenu() {
+//     const menuBtn = document.getElementById("menu-btn")
+//     const navElement = document.getElementById("site-navigation");
+//     menuBtn.addEventListener('click', ()=> {
+//         navElement.classList.toggle('menu--active')
+//     })
+// }
 
 
 
