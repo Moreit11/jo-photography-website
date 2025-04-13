@@ -50,14 +50,14 @@
       <div class="columns columns--even columns--img">
         <div class="flex-col gap-s t-shadow-dark">
           <div>
-            <h1 class="">I build small websites with great effect</h1>
-            <p class="">I build clean, one-page websites that help freelancers and small businesses get online fast — with zero fuss, zero fluff.</p>
+            <h1 class="">Budget friendly websites for Freelancers</h1>
+            <p class="">One-page web design for freelancers & small businesses</p>
           </div>
           <a href="#contact" class="btn">Get Your Site for Free</a>
         </div>
         <div>
           <div class="columns--img">
-            <img src="./media/person_working_on_Pc.jpg" alt="Man woring at on Desing project on his PC">
+            <img src="./media/laptop with notebook.jpg" alt="Man woring at on Desing project on his PC">
           </div>
         </div>
       </div>
@@ -65,35 +65,56 @@
     </div>
   </section>
   
-  <!-- Main Benefits -->
-  <section id="hero" class="hero">
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="sec--contact animate light">
     <div class="container">
-      <h1 class="">A Tiny Website Can Do Big Things</h1>
-      <p class="">I build clean, one-page websites that help freelancers and small businesses get online fast — with zero fuss, zero fluff.</p>
-      <a href="#contact" class="btn">Get Your Site for Free</a>
+        <div class="columns columns--even">
+            <div class="flex-col gap-s justify-center">     
+                <div class="contact__content gap-s flex-col">
+                    <h2 class="t-left:tab">Contact Me</h2>
+                    <p class="mw-30">Get in touch with me to kickstart your web project. You can give me a call on <a href="tel:+44123456789">+44 1234 56789</a> or email me at <a href="mailto:contact@moritzreitz.com">contact@moritzreitz.com</a></p>
+                </div>           
+            </div>
+            <div>
+                <form id="contact-form" class="form" action="" name="contact-form" onsubmit="sendForm()">
+                    <div class="f__row">
+                        <label class="f__label" for="f-name">First Name:
+                            <input placeholder="first name" name="f-name" class="f__input" type="text" autocomplete="given-name" required>
+                        </label> 
+                        <label class="f__label" for="l-name">Last Name:
+                            <input placeholder="last name" name="l-name" class="f__input" type="text" required>
+                        </label> 
+                    </div>
+                    <div class="f__row">
+                        <label class="f__label" for="email">Email:
+                            <input placeholder="email" name="email" class="f__input" type="name" autocomplete="email" required>
+                        </label> 
+                        <label class="f__label" for="phone" required>Phone:
+                            <input placeholder="phone number" name="phone" class="f__input" type="tel" autocomplete="tel" required>
+                        </label> 
+                    </div>
+                    <div class="f__row">
+                        <label class="f__label" for="message">Your Message:
+                            <textarea placeholder="how can I help you?.." rows="3" class="f__input" type="text" name="message"  required></textarea>
+                        </label> 
+                    </div>
+                    <div class="f__row">
+                        <label class="f__label" for="gdpr" required>
+                            <input class="f__input" type="checkbox" name="gdpr" required> 
+                            I consent to Moritz Reitz storing the data I submitted & contacting me regarding my enquiry.
+                        </label> 
+                    </div>
+                    <input class="btn" type="submit" value="send message">
+                    <div id="success">
+
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </section>
-  <!-- The Process -->
-  <section id="process" class="sec--light">
-    <div class="container">
-      <h2 class="">How It Works</h2>
-      <div class="grid">
-        <div class="flex">
-            <h3 class="">Tell Me About Your Business</h3>
-            <p>Fill out a short form — what you do, who it’s for, and your vibe.</p>
-        </div>
-        <div class="flex">
-            <h3 class="">Tell Me About Your Business</h3>
-            <p>Fill out a short form — what you do, who it’s for, and your vibe.</p>
-        </div>
-        <div class="flex">
-            <h3 class="">Tell Me About Your Business</h3>
-            <p>Fill out a short form — what you do, who it’s for, and your vibe.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+</section>
     </main>
     <footer>
         <div class="container">

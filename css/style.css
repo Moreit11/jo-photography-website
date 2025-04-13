@@ -160,22 +160,22 @@ header {
   width:100%;
   z-index: 100;
   backdrop-filter: blur(10px);
+  background: var(--col-dark-trans-10);
   transition: .4s ease-in-out;
 }
 .shrink .logo{
   font-size: var(--fs-300)
-
 }
 .shrink .menu__btn {
   transform: scale(.7);
   margin: 0;
   }
   
-  .sec--dark{
+  .dark{
     color: var(--col-light); 
     background: var(--col-dark);
   }
-  .sec--light {
+  .light {
     background-color: var(--col-light); 
     color: var(--col-dark)
   }
@@ -194,27 +194,8 @@ header {
     gap: var(--space-s)
   }
 
-/* Portfolio Section */
-.portfolio-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-s);
-}
-  .portfolio-card .cta{
-    text-align: right;
-    text-transform: unset;
-    transition: .4s ease-in-out;
-  }  
-  .portfolio-card__img-wrap{
-    overflow: hidden;
-  }
-  .portfolio-card img {
-    transition: .4s ease-in-out;
-  }
-    .portfolio-card:hover img {
-      transform: scale(1.1)
-    }
-/* Contact Section */
+/* Contact Elements */
+
 /* Footer */
 footer{
   border-top: 1px solid var(--col-dark-50);

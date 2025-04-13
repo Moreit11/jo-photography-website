@@ -55,9 +55,9 @@ section:has(.columns--img){
     position: absolute;
     inset: 0;
     height: 100%;
-    width: auto;
+    width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position:50% 50%;
   }
   .columns--even > *  {
     flex: 1 1 300px;
