@@ -61,6 +61,53 @@
     color: var(--col--txt);
     background: var(--col--bg);
   }
+  /* Header styles */
+header { 
+  position: fixed;
+  top:0;
+  width:100%;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: linear-gradient( to bottom, var(--col-dark), transparent);
+  transition: .4s ease-in-out;
+}
+.shrink .logo{
+  font-size: var(--fs-300)
+}
+.shrink .menu__btn {
+  transform: scale(.7);
+  margin: 0;
+  }
+  
+  .dark{
+    color: var(--col-light); 
+    background: var(--col-dark);
+  }
+  .light {
+    background-color: var(--col-light); 
+    color: var(--col-dark)
+  }
+/*hover effects*/
+.card\:hover-up{
+  transition: .4s ease-in-out;
+}
+.card\:hover-up{
+  transform: translateY(-5px);
+  box-shadow:  0 0 0px 2px var(--col-light);
+}
+  .service-card__content  {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-m);
+    gap: var(--space-s)
+  }
+
+/* Contact Elements */
+
+/* Footer */
+footer{
+  border-top: 1px solid var(--col-dark-50);
+}
   h1, h2, h3, h4, h5, h6 { 
     font-family: var(--ff-titles);
     line-height: 1.2;
@@ -167,50 +214,4 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
-/* Header styles */
-header { 
-  position: fixed;
-  top:0;
-  width:100%;
-  z-index: 100;
-  backdrop-filter: blur(10px);
-  background: linear-gradient( to bottom, var(--col-dark), transparent);
-  transition: .4s ease-in-out;
-}
-.shrink .logo{
-  font-size: var(--fs-300)
-}
-.shrink .menu__btn {
-  transform: scale(.7);
-  margin: 0;
-  }
-  
-  .dark{
-    color: var(--col-light); 
-    background: var(--col-dark);
-  }
-  .light {
-    background-color: var(--col-light); 
-    color: var(--col-dark)
-  }
-/*hover effects*/
-.card\:hover-up{
-  transition: .4s ease-in-out;
-}
-.card\:hover-up{
-  transform: translateY(-5px);
-  box-shadow:  0 0 0px 2px var(--col-light);
-}
-  .service-card__content  {
-    display: flex;
-    flex-direction: column;
-    padding: var(--space-m);
-    gap: var(--space-s)
-  }
 
-/* Contact Elements */
-
-/* Footer */
-footer{
-  border-top: 1px solid var(--col-dark-50);
-}
