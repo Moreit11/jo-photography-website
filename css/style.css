@@ -94,6 +94,7 @@
             font-weight: 700;
             font-size:1.1em;
           }
+
 .menu__ul  {
   background: var(--col--bg);
 }
@@ -116,7 +117,7 @@ a {
   }
     .f__input{
       background: none;
-      border: solid var(--col-light);
+      border: solid var(--col-dark);
       border-width: 0 0 1px 0;
       color: var(--col--txt);
     }
@@ -173,7 +174,7 @@ header {
   width:100%;
   z-index: 100;
   backdrop-filter: blur(10px);
-  background: var(--col-dark-trans-40);
+  background: linear-gradient( to bottom, var(--col-dark), transparent);
   transition: .4s ease-in-out;
 }
 .shrink .logo{
