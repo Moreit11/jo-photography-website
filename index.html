@@ -121,7 +121,7 @@
             <p>Website by <a href="https://tinywebsite.co.uk">tinywebsite.co.uk</a></p>
             <p>&copy Moritz Reitz</p>
         </div>
-
+        /*Professional service mark up*/
         <script type="application/ld+json">
             {
             "@context": "https://schema.org",
@@ -153,6 +153,7 @@
             }
 
         </script>
+        /*Service Schema Mark up*/
         <script type="application/ld+json">
             {
             "@context": "https://schema.org",
@@ -173,6 +174,33 @@
                                                                                                                                                                                                                             }
 
         </script>
+        /*Product schema mark up*/
+        <script type="application/ld+json">
+             {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "@id": "https://tinywebsite.co.uk/#product",
+            "name": "Single Page Website",
+            "description": "A custom single-page website built for your business. Starting from £100, hosted for free on Netlify. You only need a domain.",
+            "image": [
+                "https://tinywebsite.co.uk/preview.png"
+            ],
+            "brand": {
+                "@type": "Brand",
+                "name": "Tiny Websites"
+            },
+            "sku": "TW-ONEPAGE",
+            "category": "Web Design",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://tinywebsite.co.uk/",
+                "priceCurrency": "GBP",
+                "price": "100.00",
+                "availability": "https://schema.org/InStock"
+            }
+            }
+        </script>
+       
     </footer>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
