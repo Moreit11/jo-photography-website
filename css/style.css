@@ -3,6 +3,7 @@
 :root {
 /* @link https://utopia.fyi/type/calculator?c=300,15,1.2,1140,17,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 /* Font sizes*/
+  --fs-050: clamp(.7rem, 0.6rem + 0.224vw, .9rem);
   --fs-100: clamp(.9rem, 0.8rem + 0.331vw, 1.1rem);
   --fs-300: clamp(1.35rem, 1.2392rem + 0.5908vw, 1.6602rem);
   --fs-400: clamp(1.62rem, 1.4574rem + 0.867vw, 2.0752rem);
