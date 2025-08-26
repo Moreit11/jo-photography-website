@@ -10,14 +10,15 @@
 
 
 :root {
-/* @link https://utopia.fyi/type/calculator?c=300,15,1.2,1140,17,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/type/calculator?c=360,15,1.2,1900,19,1.25,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 /* Font sizes*/
-  --fs-050: clamp(.7rem, 0.6rem + 0.224vw, .9rem);
-  --fs-100: clamp(.9rem, 0.8rem + 0.331vw, 1.1rem);
-  --fs-300: clamp(1.35rem, 1.2392rem + 0.5908vw, 1.6602rem);
-  --fs-400: clamp(1.62rem, 1.4574rem + 0.867vw, 2.0752rem);
-  --fs-500: clamp(1.944rem, 1.7119rem + 1.2381vw, 2.594rem);
-  --fs-600: clamp(2.3328rem, 2.0079rem + 1.7327vw, 3.2425rem);
+  --fs-050: clamp(0.7813rem, 0.7418rem + 0.1753vw, 0.95rem);
+  --fs-100: clamp(0.9375rem, 0.8791rem + 0.2597vw, 1.1875rem);
+  --fs-200: clamp(1.125rem, 1.041rem + 0.3734vw, 1.4844rem);
+  --fs-300: clamp(1.35rem, 1.2318rem + 0.5252vw, 1.8555rem);
+  --fs-400: clamp(1.62rem, 1.4565rem + 0.7266vw, 2.3193rem);
+  --fs-500: clamp(1.944rem, 1.7207rem + 0.9924vw, 2.8992rem);
+  --fs-600: clamp(2.3328rem, 2.031rem + 1.3415vw, 3.624rem);
   
 /*Font Styles*/
   --ff-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
@@ -286,20 +287,50 @@ button.cta{
 }
 
 /* check list */
-.check-list li{
-  display: flex;
-  align-items: center;
-  gap: var(--space-2xs);
-}
-  .check-list span { /*SVG Wrapper*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-    .check-list svg{
-      height: 1rem;
-      width: 1rem;
-    }
+.check-list{
+  padding: var(--space-m) 0;
+  font-size: var(--fs-300);
 
+  gap: var(--space-xs);
+  display: flex;
+  flex-direction: column;
+}
+  .check-list li{
+    display: flex;
+    align-items: center;      
+    gap: var(--space-2xs);
+    position: relative; /*To allow pseudo element/seperator*/
+  }
+  .check-list li::after{ /*Seperator*/
+    position: absolute;
+    content:'';
+    bottom:0;
+    left:0;
+    height: 1px;
+    width: 10em;
+    max-width: 100%;
+    transform: translateY(calc((var(--space-xs) + 1px)/2)); /*ul gap + seperator widht divided by 2*/
+    background: var(--col-light);
+  }
+    .check-list span { /*SVG Wrapper*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+      .check-list svg{
+        height: var(--fs-200);
+        width: var(--fs-200);
+      }
+      /* checklist image */
+      .columns:has(.check-list) >div:has(img){
+        position: relative;
+      }
+      .columns:has(.check-list) img{
+        position:absolute;
+        height:100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
 }/* End components layer Do not remove */
 
