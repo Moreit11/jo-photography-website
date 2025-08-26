@@ -1,14 +1,14 @@
+@layer utilities {
+  @import "./utility.css";
+}
+  @import "./tailwind.css";
+@layer components {
+  @import "./styles.css";
+}
 /* Theme styles */
 /* breakpoints 750px and 950px */
 
-@layer utilities {/* 1. Utilities first */
-  @import "./utility.css";
-}
-/* 2. Tailwind base/components */
-  @import "./tailwind.css";
-@layer components {/* 3. Custom styles last */
-  @import "./style.css";
-}
+
 :root {
 /* @link https://utopia.fyi/type/calculator?c=300,15,1.2,1140,17,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 /* Font sizes*/

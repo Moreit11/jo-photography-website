@@ -296,4 +296,16 @@
     font-weight: 700;
     font-size: .6em;
   }
+.seperator-top{
+  position:relative;
+}
+.seperator-top::before{
+  background:red;
+  position:absolute;
+  top:0;
+  left:0;
+  height: 4px;
+  width: 50%;
+  max-width: 5rem;
+}
   }/*LAyer end - DO NOT REMOVE*/

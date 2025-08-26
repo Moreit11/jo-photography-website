@@ -6,9 +6,10 @@
     <meta name="robots" content="index">
     <meta name="description" content="Fast, Relieable Single Page Website Design Development. Get an online presence for yourselft hosted for free from only £100">
     <title>One-Page Website Design| from £100 One-Time Payment</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/utility.css">
     <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/style.css">
+
     
 </head>
 <body onload="ctaButton(), animation()">
@@ -51,7 +52,7 @@
                     <div class="flex flex-col gap-2xs"> 
                         <h1 class="h-double">
                             <span class="h-double__sub">One-Page Wesites</span>
-                            <span class="h-double__main">For Freelancers & Small Businesses</span>
+                            <span class="h-double__main seperator-top">For Freelancers & Small Businesses</span>
                         </h1>
                         <p class="fs-300">High Performing | SEO Optimised | Quick Set Up</p>
                     </div>
@@ -99,28 +100,28 @@
                     <form id="contact-form" class="form" action="" name="contact-form" onsubmit="sendForm()">
                         <div class="f__row">
                             <label class="f__label" for="f-name">First Name:
-                                <input placeholder="first name" name="f-name" class="f__input" type="text" autocomplete="given-name" required>
+                                <input id="f-name" placeholder="first name" name="f-name" class="f__input" type="text" autocomplete="given-name" required>
                             </label> 
                             <label class="f__label" for="l-name">Last Name:
-                                <input placeholder="last name" name="l-name" class="f__input" type="text" required>
+                                <input id="l-name" placeholder="last name" name="l-name" class="f__input" type="text" required>
                             </label> 
                         </div>
                         <div class="f__row">
                             <label class="f__label" for="email">Email:
-                                <input placeholder="email" name="email" class="f__input" type="name" autocomplete="email" required>
+                                <input id="email"  placeholder="email"name="email" class="f__input" type="name" autocomplete="email" required>
                             </label> 
                             <label class="f__label" for="phone" required>Phone:
-                                <input placeholder="phone number" name="phone" class="f__input" type="tel" autocomplete="tel" required>
+                                <input id="phone" placeholder="phone number" name="phone" class="f__input" type="tel" autocomplete="tel" required>
                             </label> 
                         </div>
                         <div class="f__row">
                             <label class="f__label" for="message">Your Message:
-                                <textarea placeholder="how can I help you?.." rows="3" class="f__input" type="text" name="message"  required></textarea>
+                                <textarea id="message" placeholder="how can I help you?.." rows="3" class="f__input" type="text" name="message"  required></textarea>
                             </label> 
                         </div>
                         <div class="f__row">
                             <label class="f__label" for="gdpr" required>
-                                <input class="f__input" type="checkbox" name="gdpr" required> 
+                                <input class="f__input" id="gdpr" type="checkbox" name="gdpr" required> 
                                 I consent to Moritz Reitz storing the data I submitted & contacting me regarding my enquiry.
                             </label> 
                         </div>
