@@ -100,12 +100,15 @@
 .gap-3xl{ 
   gap: var(--space-3xl);
 }
-/* font styles */
-.t-center{
+/* font/text styles */
+.text-center{
     text-align: center;
 }
-.t-shadow-dark {
-  text-shadow: 0 0 10px var(--col-dark) ;
+.text-shadow-dark {
+  text-shadow: 0 0 15px var(--col-dark) ;
+}
+.text-shadow-light {
+  text-shadow: 0 0 15px var(--col-light) ;
 }
 
 @media only screen and (min-width: 950px){
@@ -113,6 +116,7 @@
         text-align: left;
     }
 }
+
 /* sticky styles */
 .sticky-t-0{
     position: sticky;

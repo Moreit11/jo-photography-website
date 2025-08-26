@@ -43,7 +43,7 @@ function sendForm() {
 
 async function ctaButton()    {
     //const ctaButton = document.querySelectorAll('btn__cta')
-    const svgArrow = await  getTemplate('./media/arrow.html')
+    const svgArrow = await  getTemplate('./media/svgs/arrow.html')
     const buttons = document.querySelectorAll('.cta')
     for( button of buttons){
         let btnText = button.textContent

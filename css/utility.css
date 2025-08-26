@@ -282,4 +282,18 @@
         inset-block-start: 0;
         inset-inline-start: calc(var(--gap)/2*-1);
       }
+
+/* Heading With sub title */
+.h-double{
+  display: flex;
+  flex-direction: column;
 }
+  .h-double__main{ /*first title*/
+
+  }
+  .h-double__sub{ /*Second title*/
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .6em;
+  }
+  }/*LAyer end - DO NOT REMOVE*/
