@@ -45,26 +45,23 @@ input, button, textarea, select {
   flex-wrap: nowrap;
   gap: var(--space-xs);  
 }
-section:has(.columns--img){
-  position:relative;
+.columns--img > *:has(:not(img)) > *{
+  z-index: 1;
 }
-  .columns--img > *:has(:not(img)) > *{
-    z-index: 1;
-  }
-  .columns--img img {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position:50% 50%;
-  }
-  .columns--even > *  {
-    flex: 1 1 300px;
-  }
-  .columns--swap:nth-of-type(2n) > *:nth-child(2n) {
-    order:-1;
-  }
+.columns--img img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position:50% 50%;
+}
+.columns--even > *  {
+  flex: 1 1 300px;
+}
+.columns--swap:nth-of-type(2n) > *:nth-child(2n) {
+  order:-1;
+}
 @media only screen and (max-width: 750px)  {
   .columns  {
     flex-direction: column;
@@ -85,22 +82,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .no-link, .no-link a, a.btn, a.cta {
 /*Section styles*/
 section:has(.container)  { 
   padding: var(--space-sect--ver) var(--space-sect--hor);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 header, footer{ 
   padding: var(--space-s) var(--space-sect--hor);
 }
   section .container, footer .container, header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-l);
+    margin:auto;
     width: 100%;
     max-width: 1150px;
-    margin: auto;
   }
     .header__row{
       width: 100%;
@@ -109,7 +98,6 @@ header, footer{
     }
 button, .btn { 
   cursor: pointer;
-  margin: auto;
   line-height: 1;
   color: var(--col-light);
 }

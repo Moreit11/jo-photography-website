@@ -137,11 +137,13 @@
 /* Direction */
 .flex-row {
   flex-direction: row;
+
 }
 .flex-row-reverse {
   flex-direction: row-reverse;
 }
 .flex-col {
+  display: flex;
   flex-direction: column;
 }
 .flex-col-reverse {

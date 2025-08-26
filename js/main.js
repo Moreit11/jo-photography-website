@@ -8,7 +8,7 @@
 // }
 
 
-
+// send form  via email.js 
 function sendForm() {
     event.preventDefault() // Prevent page reload
     const cForm = document.forms['contact-form']
@@ -88,3 +88,4 @@ window.onscroll = function() {
         }
     }
   }
+// Button used for contact section
