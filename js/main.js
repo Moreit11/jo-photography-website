@@ -57,6 +57,14 @@ async function checkSVG()    {
         checkWrap.innerHTML = arrowSvg
     }
 }
+// Get svg cross
+async function crossSVG()    { 
+    const crossSvg = await  getTemplate('./media/svgs/cross.svg')
+    const crossWraps = document.querySelectorAll('.svg-cross')
+    for( crossWrap of crossWraps){
+        crossWrap.innerHTML = crossSvg
+    }
+}
 // gets html templates
 function getTemplate(templUrl){
     return fetch(templUrl) 

@@ -300,7 +300,7 @@ button.cta{
     gap: var(--space-s);
     position: relative; /*To allow pseudo element/seperator*/
   }
-  .check-list li::after{ /*Seperator*/
+  .check-list li:not(:last-of-type)::after{ /*Seperator*/
     position: absolute;
     content:'';
     bottom:0;
@@ -308,13 +308,11 @@ button.cta{
     height: 1px;
     width: 90%;
     max-width: 100%;
-    transform: translateY(calc((var(--space-l) + 1px) /2 )) 
+    transform: translateY(calc((var(--space-l) + 1px) /2 )) /*ul gap + seperator widht divided by 2*/
                translateX(-50%);
-  /*ul gap + seperator widht divided by 2*/
-               
-
-    background: var(--col-light);
+    background: var(--col-50);
   }
+
     .check-list span { /*SVG Wrapper*/
       display: flex;
       justify-content: center;

@@ -12,7 +12,7 @@
 
     
 </head>
-<body onload="ctaButton(), animation(), checkSVG()">
+<body onload="ctaButton(), animation(), checkSVG(), crossSVG()">
     <header >
         <div class="container">
             <div class="header__row">
@@ -71,7 +71,7 @@
                 <div class="columns columns--even gap-s" aria-labelledby="title-why">
                     <div>
                         <h2 id="title-why">Why Choose A One-Page Website?</h2>
-                        <ul class="check-list">
+                        <ul class="check-list py-m">
                             <li><span class="svg-check"></span>Super Fast Performance – Static HTML means your site loads instantly.</li>
                             <li><span class="svg-check"></span>100% Customisable SEO Schema Markups – Optimise your site for search engines from day one.</li>
                             <li><span class="svg-check"></span>Free Hosting – No running costs* thanks to Netlify’s free plan.*</li>
@@ -79,7 +79,7 @@
                             <li><span class="svg-check"></span>Very Affordable – Only £100 one-time payment.</li>
                             <li><span class="svg-check"></span>GDPR Friendly – Compliant with privacy standards.</li>
                         </ul>
-                        <span class="fs-050">*As long as netlify offers their free hosting.</span>
+                        <p class="fs-050 pt-l">*As long as netlify offers their free hosting.</p>
                     </div>
                     <div>
                         <img src="./media/graphics/laptop with notebook.jpg" alt="Why Choose Single Page Website Design">
@@ -97,11 +97,11 @@
                 </h2>
                 <p class="py-s mw-50">This website creation service is an effective, budget-friendly way to get your online presence live. Make sure you are the right fit for this service.</p>
                 <!-- Pro/Cons Columns -->
-                <div class="columns columns--even">
+                <div class="columns columns--even gap-l py-s">
                     <div>
                         <!-- Pros -->
                         <h3>This is for you if you...</h3>
-                        <ul class="check-list">
+                        <ul class="check-list py-s">
                             <li><span class="svg-check"></span>Have a limited budget</li>
                             <li><span class="svg-check"></span>You are looking for a service with no running cost</li>
                             <li><span class="svg-check"></span>You are looking for a fast and simple solution</li>
@@ -113,11 +113,11 @@
                     <!-- Cons -->
                     <div>
                         <h3>This is not for you if...</h3>
-                        <ul class="check-list">
-                            <li><span class="svg-check"></span>You need custom functionalities (ecommerce or membership functionality, etc.)</li>
-                            <li><span class="svg-check"></span>You need custom functionalities (ecommerce/ membership function. etc..)</li>
-                            <li><span class="svg-check"></span>You want to have an advanced site structure with more content</li>
-                            <li><span class="svg-check"></span>You want a lot of separate pages</li>
+                        <ul class="check-list py-s">
+                            <li><span class="svg-cross"></span>You need custom functionalities (ecommerce or membership functionality, etc.)</li>
+                            <li><span class="svg-cross"></span>You need custom functionalities (ecommerce/ membership function. etc..)</li>
+                            <li><span class="svg-cross"></span>You want to have an advanced site structure with more content</li>
+                            <li><span class="svg-cross"></span>You want a lot of separate pages</li>
                         </ul>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
             </div>  
         </section>
         <!-- Contact Section -->
-        <section id="contact" class="sec--contact animate light">
+        <section id="contact" class="sec--contact animate dark">
         <div class="container">
             <div class="columns columns--even">
                 <div class="flex-col gap-s justify-center">     
@@ -175,7 +175,7 @@
     </main>
     <footer>
         <div class="container">
-            <p>Website by <a href="https://tinywebsite.co.uk">tinywebsite.co.uk</a></p>
+            <p><a href="https://moritzreitz.com">Website Service by moritzreitz.com</a></p>
             <p>&copy Moritz Reitz</p>
         </div>
         <!-- Professional service mark up -->
@@ -222,6 +222,7 @@
                 "url": "https://tinywebsites.co.uk"
                 },
             "description": "Professional single-page website design starting from £100. Hosted for free on Netlify.",
+            }
         </script>
         <!-- Product schema mark up -->
         <script type="application/ld+json">
