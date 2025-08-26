@@ -121,6 +121,15 @@ footer{
   h4, .fs-300 { 
     font-size: var(--fs-300);
   }
+  h5, .fs-200 { 
+    font-size: var(--fs-300);
+  }
+  h6, .fs-100 { 
+    font-size: var(--fs-300);
+  }
+  .fs-050 {
+    font-size: var(--fs-050);
+  }
 
 /* contact element */
     .contact{ 
@@ -276,6 +285,21 @@ button.cta{
   background: linear-gradient(to top, var(--col-light), transparent);
 }
 
+/* check list */
+.check-list li{
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+  .check-list span { /*SVG Wrapper*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .check-list svg{
+      height: 1rem;
+      width: 1rem;
+    }
 
 }/* End components layer Do not remove */
 
