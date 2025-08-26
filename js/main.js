@@ -88,4 +88,3 @@ window.onscroll = function() {
         }
     }
   }
-// Button used for contact section

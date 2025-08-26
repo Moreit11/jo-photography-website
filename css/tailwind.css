@@ -1,4 +1,5 @@
 /* Grid styles */
+@layer tailwind{
 .grid {
     display: grid;
     grid-template-columns: var(--grid-col-s);
@@ -234,3 +235,5 @@
 .self-stretch {
   align-self: stretch;
 }
+
+}/*End Layer do not remove*/

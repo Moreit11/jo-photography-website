@@ -1,5 +1,14 @@
 /* Theme styles */
 /* breakpoints 750px and 950px */
+
+@layer utilities {/* 1. Utilities first */
+  @import "./utility.css";
+}
+/* 2. Tailwind base/components */
+  @import "./tailwind.css";
+@layer components {/* 3. Custom styles last */
+  @import "./style.css";
+}
 :root {
 /* @link https://utopia.fyi/type/calculator?c=300,15,1.2,1140,17,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 /* Font sizes*/
@@ -25,7 +34,7 @@
   --space-2xl: clamp(3.75rem, 3.5714rem + 0.9524vw, 4.25rem);
   --space-3xl: clamp(5.625rem, 5.3571rem + 1.4286vw, 6.375rem);
 /* section spacings */
-  --space-sect--ver: var(--space-3xl);
+  --space-sect--ver: var(--space-xl);
   --space-sect--hor: var(--space-xs);
 /*Grid styles*/
   --grid-col-s: repeat(auto-fit, minmax( min(14rem, 100%) , 1fr));
@@ -90,6 +99,7 @@ header {
   background-color: var(--col-light); 
   color: var(--col-dark)
 }
+@layer components {
 /* Footer */
 footer{
   border-top: 1px solid var(--col-dark-50);
@@ -199,13 +209,18 @@ a {
 }
 .cta {
   text-transform: capitalize;
+  font-weight: 700;
   transition: .4s ease-in-out;
   background: transparent;
   border: none;
 }
+button.cta{ 
+  padding:0;/*Remove user agent padding*/
+}
 .cta--dark{
   color: var(--col-dark);
 }
+
   .cta--dark svg path{
     fill: var(--col-dark);
     stroke: var(--col-dark);
@@ -236,7 +251,7 @@ a {
   position:relative;
 }
   .bg-img__content{
-    z-index: 10;
+    z-index: 1;
     position: relative;
   }
   .img-bg__img-wrap{
@@ -252,5 +267,14 @@ a {
 
 
 /* Hero section */
+.hero::before{
+  inset: 0;
+  content:'';
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(to top, var(--col-light), transparent);
+}
 
+
+}/* End components layer Do not remove */
 
