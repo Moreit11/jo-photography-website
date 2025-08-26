@@ -289,27 +289,31 @@ button.cta{
 /* check list */
 .check-list{
   padding: var(--space-m) 0;
-  font-size: var(--fs-300);
+  font-size: var(--fs-200);
 
-  gap: var(--space-xs);
+  gap: var(--space-l);
   display: flex;
   flex-direction: column;
 }
   .check-list li{
     display: flex;
     align-items: center;      
-    gap: var(--space-2xs);
+    gap: var(--space-s);
     position: relative; /*To allow pseudo element/seperator*/
   }
   .check-list li::after{ /*Seperator*/
     position: absolute;
     content:'';
     bottom:0;
-    left:0;
+    left:50%;
     height: 1px;
-    width: 10em;
+    width: 90%;
     max-width: 100%;
-    transform: translateY(calc((var(--space-xs) + 1px)/2)); /*ul gap + seperator widht divided by 2*/
+    transform: translateY(calc((var(--space-l) + 1px) /2 )) 
+               translateX(-50%);
+  /*ul gap + seperator widht divided by 2*/
+               
+
     background: var(--col-light);
   }
     .check-list span { /*SVG Wrapper*/

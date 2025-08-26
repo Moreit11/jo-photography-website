@@ -45,6 +45,12 @@
   .mw-40{
     max-width: 40rem;
   }
+  .mw-45{
+    max-width: 45rem;
+  }
+  .mw-50{
+    max-width: 50rem;
+  }
 /* spacing */
 /* width utilities */
 .w-full{
