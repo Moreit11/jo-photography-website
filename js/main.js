@@ -40,17 +40,24 @@ function sendForm() {
         publicKey: "rQ8SO2xTCB3JPxg19",
     });
 })();
-
+// Get SVG Arrow
 async function ctaButton()    {
-    //const ctaButton = document.querySelectorAll('btn__cta')
-    const svgArrow = await  getTemplate('./media/svgs/arrow.html')
+    const svgArrow = await  getTemplate('./media/svgs/arrow.svg')
     const buttons = document.querySelectorAll('.cta')
     for( button of buttons){
         let btnText = button.textContent
         button.innerHTML = btnText + svgArrow
     }
 }
-
+// get SVG Check symbol
+async function checkSVG()    { 
+    const arrowSvg = await  getTemplate('./media/svgs/check.svg')
+    const checkWraps = document.querySelectorAll('.svg-check')
+    for( checkWrap of checkWraps){
+        checkWrap.innerHTML = arrowSvg
+    }
+}
+// gets html templates
 function getTemplate(templUrl){
     return fetch(templUrl) 
     .then(response => response.text())

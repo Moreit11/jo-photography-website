@@ -12,7 +12,7 @@
 
     
 </head>
-<body onload="ctaButton(), animation()">
+<body onload="ctaButton(), animation(), checkSVG()">
     <header >
         <div class="container">
             <div class="header__row">
@@ -70,18 +70,18 @@
             <div class="container">
                 <div class="columns columns--even" aria-labelledby="title">
                     <div>
-                        <img src="./media/laptop with notebook.jpg" alt="Why Choose Single Page Website Design">
-                    </div>
-                    <div>
                         <h2 id="title">Why Choose Single Page Website Design?</h2>
                         <ul>
-                            <li>Super Fast Leading Times</li>
+                            <li><span class="svg-check"></span>Super Fast Leading Times</li>
                             <li>100% Customisable SEO Schema Mark Ups</li>
                             <li>Hosted for Free: No running cost*</li>
                             <li>Free Search Console Set Up Included</li>
                             <li>Very Affordable: 100 One-Time</li>
                         </ul>
                         <span class="fs-" id="forever-disclaimer">*As long as netlify offers their free hosting.</span>
+                    </div>
+                    <div>
+                        <img src="./media/laptop with notebook.jpg" alt="Why Choose Single Page Website Design">
                     </div>
                 </div>
             </div>

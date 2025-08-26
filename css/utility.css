@@ -104,6 +104,11 @@
     line-height: 1;
     color: var(--col-light);
   }
+  /* SVG elements */
+  svg{
+    margin: unset;
+    padding: unset
+  }
   /* Navigation Menu */
     .menu {
       display: flex;
@@ -308,4 +313,4 @@
   width: 50%;
   max-width: 5rem;
 }
-  }/*LAyer end - DO NOT REMOVE*/
+  }/*Layer end - DO NOT REMOVE*/
