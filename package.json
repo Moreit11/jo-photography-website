@@ -1,13 +1,16 @@
 {
+  "name": "jo-photography-website",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@11ty/eleventy": "github:11ty/eleventy",
     "@11ty/eleventy-navigation": "^1.0.4"
-  },
-  "name": "jo-photography-website",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Moritz Reitz",

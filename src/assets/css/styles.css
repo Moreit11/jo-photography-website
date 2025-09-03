@@ -1,3 +1,16 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+header{
+    border: 3px solid red;
+}
+main{
+    border: 3px solid green;
+}
+footer {
+    border: 3px solid purple;
+}
+nav, pre{
+    border: 3px solid black;
+}
