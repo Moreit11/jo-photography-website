@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy"
+  },
+  "name": "jo-photography-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Moritz Reitz",
+  "license": "ISC",
+  "description": ""
+}
