@@ -1,5 +1,12 @@
 <header>
-    <p>{{ site.name }}</p>
-    <pre>{{ collections.eleventyNavigation | dump }}</pre>
+    <p>{{ site.name }} Header</p>
+    <nav>
+    {% for item in collections.eleventyNavigation %}
+        <a href="{{ item.url }}">{{ item.title }}</a>
+    {% endfor %}
+    </nav>
+
+    <pre>{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}</pre>
+
 
 </header>
