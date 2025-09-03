@@ -1,5 +1,8 @@
 {
-    "site": "Jo's Photography",
-    "url": "https://josphotography.com"
+    "name": "Jo's Photography",
+    "url": "https://josphotography.com",
 
+    "menu":{
+        
+    }
 }

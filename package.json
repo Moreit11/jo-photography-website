@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "@11ty/eleventy": "github:11ty/eleventy"
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "@11ty/eleventy-navigation": "^1.0.4"
   },
   "name": "jo-photography-website",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

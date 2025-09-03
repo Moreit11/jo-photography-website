@@ -1,0 +1,11 @@
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if meta_title %} {{ meta_title}} {% else %} {{title}} | {{site.name}} {% endif %} </title>
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Jo's Photography">
+    <meta property="og:description" content="{% if meta_title %} {{ meta_description }} {% else %} {{ site.description }} {% endif %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://josphotography.com/">
+    <meta property="og:image" content="https://josphotography/og-image.jpg">
+</head>
