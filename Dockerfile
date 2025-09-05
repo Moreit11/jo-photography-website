@@ -1,20 +1,18 @@
-# Use official Node.js LTS image
+# Use Node 20 image
 FROM node:20
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json first (for caching)
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies INCLUDING devDependencies
+RUN npm install --include=dev
 
 # Copy the rest of the project
 COPY . .
 
-# Expose port for Eleventy
-EXPOSE 8080
+# Start Eleventy + Tailwind watchers
+CMD ["npm", "run", "dev"]
 
-# Default command for development
-CMD ["npx", "eleventy", "--serve", "--port=8080", "--watch"]

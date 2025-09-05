@@ -4,9 +4,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve",
-    "build:css": "tailwindcss -i ./src/styles.css -o ./_site/styles.css --minify"
+    "build:css": "tailwindcss -i ./src/assets/tailwind/tailwind.css -o ./_site/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/assets/tailwind/tailwind.css -o ./_site/styles.css --watch",
+    "serve": "eleventy --serve --watch",
+    "dev": "concurrently \"npm run watch:css\" \"npm run serve\""
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^1.0.4"
@@ -16,6 +17,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+      "concurrently": "^8.2.0",
     "@11ty/eleventy": "^3.1.2",
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.21",

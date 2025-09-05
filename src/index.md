@@ -8,6 +8,6 @@ eleventyNavigation:
   key: home
   order: 1
 ---
-# Homepage Mark-up Title
+# Homepage 
 This is the homepage.
 ## Navigation: 

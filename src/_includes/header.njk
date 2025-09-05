@@ -1,7 +1,7 @@
 <header>
     <p>{{ site.name }} Header</p>
     <nav>
-    {% for item in collections.eleventyNavigation %}
+    {% for item in collections.all %}
         <a href="{{ item.url }}">{{ item.title }}</a>
     {% endfor %}
     </nav>

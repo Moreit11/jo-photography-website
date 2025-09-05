@@ -12,6 +12,5 @@ footer {
     border: 3px solid purple;
 }
 nav, pre{
-    border: 3px solid black;
-    /* test */
+    border: 3px solid grey;
 }
