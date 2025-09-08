@@ -1,12 +1,4 @@
-<header>
+<header class="bg-sky-500">
     <p>{{ site.name }} Header</p>
-    <nav>
-    {% for item in collections.all %}
-        <a href="{{ item.url }}">{{ item.title }}</a>
-    {% endfor %}
-    </nav>
-
-    <pre>{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}</pre>
-
-
+    <nav>{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}</nav>
 </header>
