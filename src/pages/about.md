@@ -4,10 +4,11 @@ title: "About me"
 permalink: /about-me/
 meta_title: "Nature Photographer in Dundee"
 meta_description: "Explore Jo's nature photography from Dundee, Scotland. Stunning landscapes, wildlife, and serene scenes captured with passion and precision."
+templateEngineOverride: njk
 eleventyNavigation:
   key: "About Me"
   order: 2
-  parent: home
 ---
-
-#ABout page
+{%- include "about.njk" -%}
+{%- include "testimonials.njk" -%}
+{%- include "contact.njk" -%}

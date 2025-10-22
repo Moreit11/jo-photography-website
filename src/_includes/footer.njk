@@ -1,0 +1,75 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__content">
+      <div class="footer__brand">
+        <h3 class="footer__title">Jo Smith Photography</h3>
+        <p class="footer__tagline">Capturing the Beauty of Nature in Dundee, Scotland</p>
+      </div>
+
+      <div class="footer__links">
+        <h4>Quick Links</h4>
+        <nav>
+          <ul class="footer__nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-me">About Me</a></li>
+            <li><a href="/photography-portfolio">Portfolio</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__social">
+        <h4>Follow Me</h4>
+        <div class="footer__social-icons">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12.5 6.5c2.5 0 4.5 2 4.5 4.5 0 1.5-1 3.5-2.5 4.5-.5-1.5-1-3-1-4.5 0-1 .5-2 1.5-2s1.5.5 1.5 1.5c0 1-.5 2-1.5 2.5"></path>
+            </svg>
+          </a>
+          <a href="mailto:info@josmithphotography.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__map">
+      <h4>Find Me</h4>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143253.79446843955!2d-3.0876936!3d56.462018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48865c7a0f1d07ad%3A0x6d94bff5ec1bb0f5!2sDundee%2C%20UK!5e0!3m2!1sen!2s!4v1234567890"
+          width="100%"
+          height="300"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Location map of Dundee, Scotland">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; {% if site.year %}{{ site.year }}{% else %}2025{% endif %} Jo Smith Photography. All rights reserved.</p>
+      <p class="footer__credit">Web Development by <a href="https://moritzreitz.com">Moritz Reitz</a></p>
+      <p class="footer__datetime" id="footer-datetime"></p>
+    </div>
+  </div>
+</footer>
+<script type="module" src="/assets/js/main.js"></script>

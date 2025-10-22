@@ -1,0 +1,22 @@
+<section class="gallery">
+  <div class="container">
+    <h2 class="gallery__title">{% if galleryTitle %}{{ galleryTitle }}{% else %}Gallery{% endif %}</h2>
+    <div class="gallery__grid">
+      {%- for image in galleryImages -%}
+      <div class="gallery__item" data-index="{{ loop.index0 }}">
+        <img src="{{ image.src }}" alt="{% if image.alt %}{{ image.alt }}{% else %}Gallery image{% endif %}" loading="lazy">
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightbox-close">&times;</button>
+  <button class="lightbox__nav lightbox__prev" id="lightbox-prev">&lsaquo;</button>
+  <div class="lightbox__content">
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+  </div>
+  <button class="lightbox__nav lightbox__next" id="lightbox-next">&rsaquo;</button>
+</div>

@@ -1,4 +1,17 @@
-<header class="bg-sky-500">
-    <p>{{ site.name }} Header</p>
-    <nav>{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}</nav>
+<header class="">
+    <div class="container flex justify-between align-center">
+        <div class="logo">
+            <a href="/">
+                <img class="logo__img" src="/assets/media/Jo-smith-photography-logo.png" alt="Jo's Photography Home">
+            </a>
+        </div>
+        <nav id="primary-nav" class="primary-nav">
+            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+            <button id="nav-btn" class="primary-nav__btn">
+                <span class="nav-btn__bar"></span>
+                <span class="nav-btn__bar"></span>
+                <span class="nav-btn__bar"></span>
+        </button>
+        </nav>
+    </div>
 </header>

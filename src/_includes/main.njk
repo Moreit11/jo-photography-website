@@ -4,14 +4,9 @@
 <body>
   {% include "header.njk" %}
     <main>
-        <section>
-            <h1>{{title}}</h1>
-        </section>
+        {% include "hero.njk" %}
         {{content | safe}}
     </main>
-    <footer>
-      <p> copyrigh Jo's Photography</p>
-    </footer>
-<script src="assets/js/main.js"></script>
+    {% include "footer.njk" %}
 </body>
 </html>

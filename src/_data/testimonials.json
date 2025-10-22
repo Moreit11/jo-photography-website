@@ -1,0 +1,44 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sarah Mitchell",
+      "location": "Edinburgh",
+      "text": "Jo's nature photography is absolutely stunning. She captured the Scottish Highlands in a way that took my breath away. Her attention to detail and ability to find beauty in the smallest moments is remarkable.",
+      "rating": 5,
+      "image": "/assets/media/testimonials/sarah.jpg"
+    },
+    {
+      "id": 2,
+      "name": "James Robertson",
+      "location": "Dundee",
+      "text": "Working with Jo was an absolute pleasure. Her passion for nature photography shines through in every shot. The coastal landscapes she captured for our conservation project were beyond our expectations.",
+      "rating": 5,
+      "image": "/assets/media/testimonials/james.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Emma MacLeod",
+      "location": "Glasgow",
+      "text": "Jo has an incredible eye for capturing the essence of Scotland's natural beauty. Her wildlife photography is both artistic and authentic. I highly recommend her work to anyone looking for stunning nature imagery.",
+      "rating": 5,
+      "image": "/assets/media/testimonials/emma.jpg"
+    },
+    {
+      "id": 4,
+      "name": "David Anderson",
+      "location": "Aberdeen",
+      "text": "The photographs Jo took of our nature reserve were exceptional. She managed to capture the changing seasons and the diverse wildlife in ways we never imagined. Her professionalism and creativity are outstanding.",
+      "rating": 5,
+      "image": "/assets/media/testimonials/david.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Lisa Campbell",
+      "location": "Perth",
+      "text": "Jo's landscape photography is pure magic. She has a unique ability to capture light and atmosphere that makes you feel like you're right there in nature. Her work has inspired me to explore Scotland's beauty more deeply.",
+      "rating": 5,
+      "image": "/assets/media/testimonials/lisa.jpg"
+    }
+  ]
+}
