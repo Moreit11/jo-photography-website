@@ -1,4 +1,6 @@
-console.log("main.js loaded")
+/* jshint esversion: 11 */
+/* jshint module: true */
+/* jshint browser: true */
 
 // Import Splide from CDN
 import Splide from 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.esm.js';
