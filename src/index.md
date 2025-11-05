@@ -4,6 +4,7 @@ title: "Jo's photography website"
 permalink: /
 meta_title: "Nature Photographer in Dundee"
 meta_description: "Explore Jo's nature photography from Dundee, Scotland. Stunning landscapes, wildlife, and serene scenes captured with passion and precision."
+templateEngineOverride: njk,md
 heroTitle: "Jo Smith Photography"
 heroSubtitle: "Capturing the Beauty of Nature in Dundee, Scotland"
 heroButton: "View Portfolio"
@@ -24,4 +25,4 @@ galleryImages:
     alt: "Small river"
 ---
 
-{% include "gallery.njk" %}
+{%- include "gallery.njk" -%}

@@ -4,6 +4,7 @@ title: "Contact"
 permalink: /contact/
 meta_title: "Contact Jo Smith Photography | Dundee Photographer"
 meta_description: "Get in touch with Jo Smith Photography for bookings, enquiries, or collaborations. Based in Dundee, Scotland."
+templateEngineOverride: njk,md
 eleventyNavigation:
   key: "Contact"
   order: 4
