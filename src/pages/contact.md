@@ -9,7 +9,6 @@ eleventyNavigation:
   key: "Contact"
   order: 4
 ---
-
 <section class="contact-hero">
   <div class="container">
     <h1 class="contact-hero__title">Get in Touch</h1>
