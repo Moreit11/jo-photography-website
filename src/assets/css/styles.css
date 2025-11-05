@@ -1,6 +1,12 @@
-/* @link https://utopia.fyi/type/calculator?c=360,15,1.2,1240,17,1.25,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* ========================================
+   CUSTOM PROPERTIES & CSS VARIABLES
+   ======================================== */
+
+/* Fluid Typography System - Generated using Utopia
+   @link https://utopia.fyi/type/calculator?c=360,15,1.2,1240,17,1.25,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
+  /* Font Size Scale - Fluid responsive typography */
   --fs--1: clamp(0.7813rem, 0.7531rem + 0.125vw, 0.85rem);
   --fs-0: clamp(0.9375rem, 0.8864rem + 0.2273vw, 1.0625rem);
   --fs-1: clamp(1.125rem, 1.0419rem + 0.3693vw, 1.3281rem);
@@ -10,7 +16,9 @@
   --fs-5: clamp(2.3328rem, 1.9607rem + 1.654vw, 3.2425rem);
   --fs-6: clamp(2.7994rem, 2.2865rem + 2.2796vw, 4.0531rem);
 
-  /* @link https://utopia.fyi/space/calculator?c=360,14,1.2,1240,17,1.25,6,1,&s=0.75|0.6|0.5|0,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  /* Fluid Spacing System - Generated using Utopia
+     @link https://utopia.fyi/space/calculator?c=360,14,1.2,1240,17,1.25,6,1,&s=0.75|0.6|0.5|0,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  /* Spacing Scale - Used for margins, padding, and gaps */
   --space-4xs: clamp(0rem, 0rem + 0vw, 0rem);
   --space-3xs: clamp(0.4375rem, 0.3864rem + 0.2273vw, 0.5625rem);
   --space-2xs: clamp(0.5rem, 0.4489rem + 0.2273vw, 0.625rem);
@@ -21,11 +29,12 @@
   --space-xl: clamp(2.625rem, 2.3949rem + 1.0227vw, 3.1875rem);
   --space-2xl: clamp(3.5rem, 3.1932rem + 1.3636vw, 4.25rem);
   --space-3xl: clamp(5.25rem, 4.7898rem + 2.0455vw, 6.375rem);
-  /*Section spacing variables*/
-  --section-pad-hor: var(--space-2xs) ;
-  --section-pad-ver: var(--space-xl);
 
-  /* Color variables */
+  /* Section Spacing - Consistent padding across all sections */
+  --section-pad-hor: var(--space-2xs);  /* Horizontal section padding */
+  --section-pad-ver: var(--space-xl);   /* Vertical section padding */
+
+  /* Color Palette - Base neutral colors from lightest to darkest */
   --col-base-100: hsl(46, 67%, 93%);
   --col-base-200: hsl(46, 50%, 85%);
   --col-base-300: hsl(46, 40%, 75%);
@@ -36,35 +45,49 @@
   --col-base-800: hsl(46, 10%, 25%);
   --col-base-900: hsl(46, 8%, 15%);
 
-  --col-light: var(--col-base-100);
-  --col-dark: var(--col-base-900);
+  /* Semantic Color Assignments */
+  --col-light: var(--col-base-100);  /* Light background */
+  --col-dark: var(--col-base-900);   /* Dark text/backgrounds */
 
-  --col-primary: hsl(82, 39%, 30%);
-  --col-accent: hsl(23, 42%, 65%);
-  --col-neutral: hsl(73, 9%, 40%);
+  /* Brand Colors */
+  --col-primary: hsl(82, 39%, 30%);  /* Primary brand color - olive green */
+  --col-accent: hsl(23, 42%, 65%);   /* Accent color - warm terracotta */
+  --col-neutral: hsl(73, 9%, 40%);   /* Neutral color */
 }
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+/* Body - Global typography and colors */
 body{
     font-family: Roboto,sans-serif;
     color: var(--col-dark);
     background: var(--col-light)
 }
-header, footer {
 
-}
+/* Section - Consistent padding across all page sections */
 section{
   padding: var(--section-pad-ver) var(--section-pad-hor);
 }
+
+/* Container - Content wrapper with max width */
 .container{
     width: 100%;
     max-width: 1200px;
     margin: auto;
 }
 
+/* Logo Styles */
 .logo__img{
     height: 50px;
 }
 
-/*Menu styles*/
+/* ========================================
+   NAVIGATION MENU STYLES
+   ======================================== */
+
+/* Primary Navigation - Mobile-first responsive menu with hamburger */
 .primary-nav{
     width: 100%;
     display: flex;
@@ -72,6 +95,7 @@ section{
     align-items: center;
 }
 
+/* Navigation Menu List - Hidden by default on mobile */
 .primary-nav ul{
     display: flex;
     flex-direction: column;
@@ -81,7 +105,7 @@ section{
     list-style: none;
     margin: 0;
     padding: 0;
-    /*hide menu*/
+    /* Hide menu by default - shown when .open class added */
     height: 0;
     width: 0;
     opacity: 0;
@@ -92,6 +116,7 @@ section{
     transition: opacity 0.3s ease;
 }
 
+/* Navigation Links */
 .primary-nav a {
     color: var(--col-dark);
     text-decoration: none;
@@ -100,11 +125,12 @@ section{
     transition: color 0.3s ease;
 }
 
+/* Navigation Link Hover State */
 .primary-nav a:hover {
     color: var(--col-primary);
 }
 
-/*Menu Button*/
+/* Hamburger Menu Button - Mobile only */
 .primary-nav__btn{
     padding: var(--space-2xs);
     display: flex;
@@ -118,6 +144,7 @@ section{
     transition: all 0.3s ease;
 }
 
+/* Hamburger Icon Bars */
 .nav-btn__bar{
     display: block;
     width: 1.5em;
@@ -127,7 +154,7 @@ section{
     transition: all 0.3s ease;
 }
 
-/*menu visible*/
+/* Menu Open State - Fullscreen overlay when active */
 .primary-nav.open ul{
     height: 100vh;
     width: 100vw;
@@ -155,12 +182,14 @@ section{
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Desktop menu - above 1000px */
+/* Desktop Navigation - Horizontal layout above 1000px breakpoint */
 @media (min-width: 1000px) {
+    /* Hide hamburger button on desktop */
     .primary-nav__btn {
         display: none;
     }
 
+    /* Show horizontal navigation menu */
     .primary-nav ul {
         position: static;
         flex-direction: row;
@@ -171,32 +200,42 @@ section{
         gap: var(--space-m);
     }
 
+    /* Smaller font size for desktop */
     .primary-nav a {
         font-size: var(--fs-1);
     }
 
+    /* Reset background for desktop */
     .primary-nav.open ul {
         height: auto;
         width: auto;
         background: transparent;
     }
 }
-/* Gallery Section - Masonry Layout */
+
+/* ========================================
+   GALLERY SECTION
+   ======================================== */
+
+/* Gallery Section - Responsive masonry layout */
 .gallery {
     padding: var(--section-pad-ver) var(--section-pad-hor);
 }
 
+/* Gallery Title */
 .gallery__title {
     font-size: var(--fs-4);
     margin-bottom: var(--space-l);
     text-align: center;
 }
 
+/* Gallery Grid - CSS columns for masonry effect */
 .gallery__grid {
-    column-count: 1;
+    column-count: 1;  /* Single column on mobile */
     column-gap: var(--space-m);
 }
 
+/* Gallery Item - Individual image container */
 .gallery__item {
     position: relative;
     overflow: hidden;
@@ -207,10 +246,12 @@ section{
     transition: transform 0.3s ease;
 }
 
+/* Gallery Item Hover - Lift effect */
 .gallery__item:hover {
     transform: translateY(-4px);
 }
 
+/* Gallery Images */
 .gallery__item img {
     width: 100%;
     height: auto;
@@ -218,19 +259,25 @@ section{
     border-radius: 8px;
 }
 
+/* Gallery Responsive Columns - Tablet */
 @media (min-width: 600px) {
     .gallery__grid {
-        column-count: 2;
+        column-count: 2;  /* Two columns on tablet */
     }
 }
 
+/* Gallery Responsive Columns - Desktop */
 @media (min-width: 900px) {
     .gallery__grid {
-        column-count: 3;
+        column-count: 3;  /* Three columns on desktop */
     }
 }
 
-/* Lightbox Styles */
+/* ========================================
+   LIGHTBOX (IMAGE MODAL)
+   ======================================== */
+
+/* Lightbox Container - Fullscreen image viewer */
 .lightbox {
     display: none;
     position: fixed;
@@ -244,16 +291,19 @@ section{
     justify-content: center;
 }
 
+/* Lightbox Active State */
 .lightbox.active {
     display: flex;
 }
 
+/* Lightbox Content Wrapper */
 .lightbox__content {
     position: relative;
     max-width: 90%;
     max-height: 90%;
 }
 
+/* Lightbox Image */
 .lightbox__img {
     max-width: 100%;
     max-height: 90vh;
@@ -262,6 +312,7 @@ section{
     border-radius: 4px;
 }
 
+/* Lightbox Close Button */
 .lightbox__close {
     position: absolute;
     top: 20px;
@@ -276,10 +327,12 @@ section{
     z-index: 1001;
 }
 
+/* Lightbox Close Button Hover */
 .lightbox__close:hover {
     color: var(--col-accent);
 }
 
+/* Lightbox Navigation Buttons - Previous/Next */
 .lightbox__nav {
     position: absolute;
     top: 50%;
@@ -294,31 +347,40 @@ section{
     transition: background 0.3s ease;
 }
 
+/* Navigation Button Hover */
 .lightbox__nav:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
+/* Previous Button Position */
 .lightbox__prev {
     left: 20px;
 }
 
+/* Next Button Position */
 .lightbox__next {
     right: 20px;
 }
 
-/* Contact Page Styles */
+/* ========================================
+   CONTACT PAGE
+   ======================================== */
+
+/* Contact Hero - Page header section */
 .contact-hero {
     padding: var(--space-3xl) var(--section-pad-hor);
     background: linear-gradient(135deg, var(--col-base-200) 0%, var(--col-base-300) 100%);
     text-align: center;
 }
 
+/* Contact Hero Title */
 .contact-hero__title {
     font-size: var(--fs-5);
     margin-bottom: var(--space-m);
     color: var(--col-dark);
 }
 
+/* Contact Hero Subtitle */
 .contact-hero__subtitle {
     font-size: var(--fs-1);
     color: var(--col-base-800);
@@ -326,10 +388,12 @@ section{
     margin: 0 auto;
 }
 
+/* Contact Section Container */
 .contact-section {
     padding: var(--section-pad-ver) var(--section-pad-hor);
 }
 
+/* Contact Info and Form Section Titles */
 .contact-info h2,
 .contact-form h2 {
     font-size: var(--fs-3);
@@ -337,6 +401,7 @@ section{
     color: var(--col-dark);
 }
 
+/* Contact Information Item - Email, phone, location */
 .contact-info__item {
     display: flex;
     align-items: center;
@@ -344,6 +409,7 @@ section{
     margin-bottom: var(--space-l);
 }
 
+/* Contact Info Icon Container - Circular icon background */
 .contact-info__icon {
     flex-shrink: 0;
     width: 48px;
@@ -356,38 +422,48 @@ section{
     color: var(--col-primary);
 }
 
+/* Contact Info Icon SVG */
 .contact-info__icon svg {
     width: 24px;
     height: 24px;
 }
 
+/* Contact Info Item Heading */
 .contact-info__item h3 {
     font-size: var(--fs-1);
     color: var(--col-primary);
     margin-bottom: var(--space-xs);
 }
 
+/* Contact Info Item Paragraph */
 .contact-info__item p {
     font-size: var(--fs-0);
     color: var(--col-base-800);
     margin: 0;
 }
 
+/* Contact Info Links */
 .contact-info__item a {
     color: var(--col-base-800);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
+/* Contact Info Link Hover */
 .contact-info__item a:hover {
     color: var(--col-primary);
 }
 
-/* Form Styles */
+/* ========================================
+   CONTACT FORM STYLES
+   ======================================== */
+
+/* Form Group - Individual form field container */
 .form-group {
     margin-bottom: var(--space-m);
 }
 
+/* Form Label */
 .form-group label {
     display: block;
     font-size: var(--fs-0);
@@ -396,6 +472,7 @@ section{
     color: var(--col-dark);
 }
 
+/* Form Inputs and Textarea */
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -407,16 +484,19 @@ section{
     transition: border-color 0.3s ease;
 }
 
+/* Form Input Focus State */
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--col-primary);
 }
 
+/* Textarea - Allow vertical resizing only */
 .form-group textarea {
     resize: vertical;
 }
 
+/* Contact Form Submit Button */
 .contact-form__submit {
     padding: var(--space-s) var(--space-l);
     background: var(--col-primary);
@@ -429,13 +509,18 @@ section{
     transition: all 0.3s ease;
 }
 
+/* Submit Button Hover State */
 .contact-form__submit:hover {
     background: var(--col-accent);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Hero Section */
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+/* Hero Section - Fullscreen background image with overlay */
 .hero {
     position: relative;
     width: 100%;
@@ -451,6 +536,7 @@ section{
     padding: 0;
 }
 
+/* Hero Dark Overlay - Improves text readability */
 .hero::before {
     content: '';
     position: absolute;
@@ -462,6 +548,7 @@ section{
     z-index: 1;
 }
 
+/* Hero Content Container */
 .hero__content {
     position: relative;
     z-index: 2;
@@ -471,6 +558,7 @@ section{
     padding: var(--space-m);
 }
 
+/* Hero Title */
 .hero__title {
     font-size: var(--fs-6);
     font-weight: 700;
@@ -478,12 +566,14 @@ section{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Hero Subtitle */
 .hero__subtitle {
     font-size: var(--fs-2);
     margin-bottom: var(--space-l);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* Hero Call-to-Action Button */
 .hero__btn {
     display: inline-block;
     padding: var(--space-s) var(--space-l);
@@ -497,13 +587,18 @@ section{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Hero Button Hover State */
 .hero__btn:hover {
     background: var(--col-accent);
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Footer Styles */
+/* ========================================
+   FOOTER SECTION
+   ======================================== */
+
+/* Footer - Dark background with multiple columns */
 .footer {
     background: var(--col-base-800);
     color: var(--col-base-200);
@@ -511,6 +606,7 @@ section{
     margin-top: var(--space-3xl);
 }
 
+/* Footer Content Grid */
 .footer__content {
     display: grid;
     grid-template-columns: 1fr;
@@ -518,30 +614,35 @@ section{
     margin-bottom: var(--space-xl);
 }
 
+/* Footer Grid - Tablet Layout */
 @media (min-width: 600px) {
     .footer__content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Footer Grid - Desktop Layout */
 @media (min-width: 900px) {
     .footer__content {
         grid-template-columns: 2fr 1fr 1fr;
     }
 }
 
+/* Footer Title */
 .footer__title {
     font-size: var(--fs-3);
     color: var(--col-light);
     margin-bottom: var(--space-s);
 }
 
+/* Footer Tagline */
 .footer__tagline {
     font-size: var(--fs-0);
     color: var(--col-base-300);
     line-height: 1.6;
 }
 
+/* Footer Section Headings */
 .footer__links h4,
 .footer__social h4 {
     font-size: var(--fs-1);
@@ -549,16 +650,19 @@ section{
     margin-bottom: var(--space-m);
 }
 
+/* Footer Navigation List */
 .footer__nav {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* Footer Navigation List Items */
 .footer__nav li {
     margin-bottom: var(--space-s);
 }
 
+/* Footer Navigation Links */
 .footer__nav a {
     color: var(--col-base-300);
     text-decoration: none;
@@ -566,16 +670,19 @@ section{
     font-size: var(--fs-0);
 }
 
+/* Footer Navigation Link Hover */
 .footer__nav a:hover {
     color: var(--col-accent);
 }
 
+/* Footer Social Media Icons Container */
 .footer__social-icons {
     display: flex;
     gap: var(--space-m);
     flex-wrap: wrap;
 }
 
+/* Footer Social Media Icon Links - Circular buttons */
 .footer__social-icons a {
     display: flex;
     align-items: center;
@@ -588,17 +695,20 @@ section{
     transition: all 0.3s ease;
 }
 
+/* Footer Social Icon Hover - Lift effect */
 .footer__social-icons a:hover {
     background: var(--col-primary);
     color: var(--col-light);
     transform: translateY(-3px);
 }
 
+/* Footer Social Media SVG Icons */
 .footer__social-icons svg {
     width: 20px;
     height: 20px;
 }
 
+/* Footer Bottom Bar - Copyright and credits */
 .footer__bottom {
     border-top: 1px solid var(--col-base-700);
     padding-top: var(--space-m);
@@ -609,6 +719,7 @@ section{
     text-align: center;
 }
 
+/* Footer Bottom - Horizontal layout on tablet+ */
 @media (min-width: 600px) {
     .footer__bottom {
         flex-direction: row;
@@ -616,44 +727,81 @@ section{
     }
 }
 
+/* Footer Bottom Text */
 .footer__bottom p {
     margin: 0;
     font-size: var(--fs--1);
     color: var(--col-base-400);
 }
 
+/* Footer Credit Links */
 .footer__credit a {
     color: var(--col-accent);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
+/* Footer Credit Link Hover */
 .footer__credit a:hover {
     color: var(--col-primary);
 }
 
-/* Services Section */
+/* Footer Map Section */
+.footer__map {
+    margin-top: var(--space-xl);
+}
+
+.footer__map h4 {
+    font-size: var(--fs-1);
+    color: var(--col-light);
+    margin-bottom: var(--space-m);
+}
+
+/* Map Container - Responsive iframe wrapper */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: var(--radius-m);
+}
+
+/* Map iframe - Fill container */
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ========================================
+   SERVICES SECTION
+   ======================================== */
+
+/* Services Section - Service offerings with cards */
 .services {
     padding: var(--section-pad-ver) var(--section-pad-hor);
     background: var(--col-base-200);
 }
 
+/* Services Header Container */
 .services__header {
     text-align: center;
     margin-bottom: var(--space-2xl);
 }
 
+/* Services Section Title */
 .services__title {
     font-size: var(--fs-4);
     color: var(--col-dark);
     margin-bottom: var(--space-s);
 }
 
+/* Services Section Subtitle */
 .services__subtitle {
     font-size: var(--fs-1);
     color: var(--col-base-700);
 }
 
+/* Service Card - Individual service offering card */
 .service-card {
     background: var(--col-light);
     border-radius: 12px;
@@ -664,17 +812,20 @@ section{
     flex-direction: column;
 }
 
+/* Service Card Hover - Lift and shadow effect */
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Service Card Image Container */
 .service-card__image {
     width: 100%;
     height: 300px;
     overflow: hidden;
 }
 
+/* Service Card Image */
 .service-card__image img {
     width: 100%;
     height: 100%;
@@ -683,10 +834,12 @@ section{
     transition: transform 0.3s ease;
 }
 
+/* Service Card Image Hover - Zoom effect */
 .service-card:hover .service-card__image img {
     transform: scale(1.05);
 }
 
+/* Service Card Content Container */
 .service-card__content {
     padding: var(--space-l);
     flex-grow: 1;
@@ -694,12 +847,14 @@ section{
     flex-direction: column;
 }
 
+/* Service Card Title */
 .service-card__title {
     font-size: var(--fs-3);
     color: var(--col-primary);
     margin-bottom: var(--space-m);
 }
 
+/* Service Card Description */
 .service-card__description {
     font-size: var(--fs-0);
     line-height: 1.7;
@@ -707,6 +862,7 @@ section{
     margin-bottom: var(--space-l);
 }
 
+/* Service Card Features List */
 .service-card__features {
     list-style: none;
     padding: 0;
@@ -714,6 +870,7 @@ section{
     flex-grow: 1;
 }
 
+/* Service Card Feature List Items */
 .service-card__features li {
     font-size: var(--fs-0);
     color: var(--col-base-700);
@@ -722,6 +879,7 @@ section{
     position: relative;
 }
 
+/* Service Card Feature Checkmark Icon */
 .service-card__features li::before {
     content: '✓';
     position: absolute;
@@ -730,6 +888,7 @@ section{
     font-weight: bold;
 }
 
+/* Service Card Call-to-Action Button */
 .service-card__cta {
     display: inline-block;
     padding: var(--space-s) var(--space-l);
@@ -743,44 +902,55 @@ section{
     transition: all 0.3s ease;
 }
 
+/* Service Card CTA Hover State */
 .service-card__cta:hover {
     background: var(--col-accent);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* About Section */
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
+/* About Section - About the photographer */
 .about {
     padding: var(--section-pad-ver) var(--section-pad-hor);
     background: var(--col-light);
 }
 
+/* About Header Container */
 .about__header {
     text-align: center;
     margin-bottom: var(--space-2xl);
 }
 
+/* About Section Title */
 .about__title {
     font-size: var(--fs-4);
     color: var(--col-dark);
     margin-bottom: var(--space-s);
 }
 
+/* About Section Subtitle */
 .about__subtitle {
     font-size: var(--fs-1);
     color: var(--col-base-700);
 }
 
+/* About Content Container */
 .about__content {
     padding: var(--space-m);
 }
 
+/* About Content Subheadings */
 .about__content h3 {
     font-size: var(--fs-2);
     color: var(--col-primary);
     margin-bottom: var(--space-m);
 }
 
+/* About Content Paragraphs */
 .about__content p {
     font-size: var(--fs-0);
     line-height: 1.7;
@@ -788,37 +958,47 @@ section{
     margin-bottom: var(--space-m);
 }
 
+/* About Content Last Paragraph - Remove bottom margin */
 .about__content p:last-child {
     margin-bottom: 0;
 }
 
-/* Testimonials Section */
+/* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
+
+/* Testimonials Section - Client reviews carousel */
 .testimonials {
     padding: var(--section-pad-ver) var(--section-pad-hor);
     background: var(--col-base-100);
 }
 
+/* Testimonials Header Container */
 .testimonials__header {
     text-align: center;
     margin-bottom: var(--space-2xl);
 }
 
+/* Testimonials Section Title */
 .testimonials__title {
     font-size: var(--fs-4);
     color: var(--col-dark);
     margin-bottom: var(--space-s);
 }
 
+/* Testimonials Section Subtitle */
 .testimonials__subtitle {
     font-size: var(--fs-1);
     color: var(--col-base-700);
 }
 
+/* Testimonials Carousel Container */
 .testimonials__carousel {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Testimonial Card - Individual review card */
 .testimonial-card {
     background: var(--col-light);
     padding: var(--space-l);
@@ -830,11 +1010,13 @@ section{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Testimonial Card Hover - Lift effect */
 .testimonial-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Testimonial Star Rating Container */
 .testimonial-card__stars {
     display: flex;
     gap: var(--space-3xs);
@@ -842,16 +1024,19 @@ section{
     color: var(--col-accent);
 }
 
+/* Star Icon */
 .star-icon {
     width: 20px;
     height: 20px;
 }
 
+/* Testimonial Quote Container */
 .testimonial-card__quote {
     flex-grow: 1;
     margin: 0 0 var(--space-l) 0;
 }
 
+/* Testimonial Quote Text */
 .testimonial-card__quote p {
     font-size: var(--fs-0);
     line-height: 1.6;
@@ -859,6 +1044,7 @@ section{
     font-style: italic;
 }
 
+/* Testimonial Author Container */
 .testimonial-card__author {
     display: flex;
     align-items: center;
@@ -867,11 +1053,13 @@ section{
     border-top: 1px solid var(--col-base-300);
 }
 
+/* Testimonial Author Info Container */
 .testimonial-card__info {
     display: flex;
     flex-direction: column;
 }
 
+/* Testimonial Author Name */
 .testimonial-card__name {
     font-size: var(--fs-1);
     font-weight: 600;
@@ -879,31 +1067,40 @@ section{
     font-style: normal;
 }
 
+/* Testimonial Author Location */
 .testimonial-card__location {
     font-size: var(--fs--1);
     color: var(--col-base-600);
 }
 
-/* Splide Customization */
+/* ========================================
+   SPLIDE CAROUSEL CUSTOMIZATION
+   ======================================== */
+
+/* Splide Arrow Buttons */
 .splide__arrow {
     background: var(--col-primary);
     opacity: 0.9;
     transition: all 0.3s ease;
 }
 
+/* Splide Arrow Hover State */
 .splide__arrow:hover {
     background: var(--col-accent);
     opacity: 1;
 }
 
+/* Splide Arrow Icons */
 .splide__arrow svg {
     fill: var(--col-light);
 }
 
+/* Splide Pagination Dots */
 .splide__pagination__page {
     background: var(--col-base-400);
 }
 
+/* Splide Active Pagination Dot */
 .splide__pagination__page.is-active {
     background: var(--col-primary);
     transform: scale(1.2);

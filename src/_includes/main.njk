@@ -1,12 +1,25 @@
+{# ============================================
+   MAIN LAYOUT TEMPLATE - Base HTML structure
+   This is the main layout wrapper for all pages
+   ============================================ #}
 <!DOCTYPE html>
 <html lang="en">
+{# Document Head - Meta tags, stylesheets, fonts #}
 {% include "head.njk"%}
 <body>
+  {# Site Header - Logo and navigation #}
   {% include "header.njk" %}
+
+    {# Main Content Area #}
     <main>
+        {# Hero Section - Full-screen banner #}
         {% include "hero.njk" %}
+
+        {# Page Content - From Markdown/template files #}
         {{content | safe}}
     </main>
+
+    {# Site Footer - Links, social media, map, copyright #}
     {% include "footer.njk" %}
 </body>
 </html>

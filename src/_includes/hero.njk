@@ -1,7 +1,15 @@
+{# ============================================
+   HERO SECTION - Full-screen hero banner with title, subtitle, and CTA
+   ============================================ #}
 <section class="hero">
   <div class="hero__content">
+    {# Hero Title - Uses heroTitle from front matter, otherwise page title #}
     <h1 class="hero__title">{% if heroTitle %}{{ heroTitle }}{% else %} {{title}} {% endif %}</h1>
+
+    {# Hero Subtitle - Uses heroSubtitle from front matter, otherwise default tagline #}
     <p class="hero__subtitle">{% if heroSubtitle %}{{ heroSubtitle }}{% else %}Capturing the Beauty of Nature in Dundee, Scotland{% endif %}</p>
+
+    {# Hero CTA Button - Only shows if heroButton is defined in front matter #}
     {% if heroButton %}
     <a href="{% if heroButtonLink %}{{ heroButtonLink }}{% else %}/portfolio{% endif %}" class="hero__btn">{{ heroButton }}</a>
     {% endif %}

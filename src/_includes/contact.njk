@@ -1,8 +1,15 @@
+{# ============================================
+   CONTACT SECTION - Contact information and form
+   ============================================ #}
 <section class="contact-section">
   <div class="container">
+    {# Two Column Layout - Contact info and form side by side #}
     <div class="columns columns--even">
+      {# Contact Information Column #}
       <div class="contact-info">
         <h2>Contact Information</h2>
+
+        {# Location Info Item #}
         <div class="contact-info__item">
           <div class="contact-info__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -15,6 +22,8 @@
             <p>Dundee, Scotland</p>
           </div>
         </div>
+
+        {# Email Info Item #}
         <div class="contact-info__item">
           <div class="contact-info__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -27,6 +36,8 @@
             <p><a href="mailto:info@josmithphotography.com">info@josmithphotography.com</a></p>
           </div>
         </div>
+
+        {# Phone Info Item #}
         <div class="contact-info__item">
           <div class="contact-info__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -39,8 +50,11 @@
           </div>
         </div>
       </div>
+
+      {# Contact Form Column #}
       <div class="contact-form">
         <h2>Send a Message</h2>
+        {# Netlify Forms - Automatically handles form submissions #}
         <form id="contact-form" netlify>
           <div class="form-group">
             <label for="name">Name *</label>

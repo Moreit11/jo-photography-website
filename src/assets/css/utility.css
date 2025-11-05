@@ -1,55 +1,79 @@
-/*column styles*/
+/* ========================================
+   UTILITY CSS - REUSABLE HELPER CLASSES
+   ======================================== */
+
+/* ========================================
+   COLUMN LAYOUT SYSTEM
+   ======================================== */
+
+/* Base Column Styles - Mobile-first (stacked vertically) */
 .columns  {
   display:flex;
   flex-direction: column;
   align-items: stretch;
    gap: var(--space-m)
 }
+
+/* Column Children - Flex containers */
   .columns > * {
     display: flex;
     flex-direction: column;
   }
 
-@media only screen and (min-width: 1000px)  { /*Column styles desktop*/
-/*column utilties*/
+/* Desktop Column Layout - Horizontal row layout above 1000px */
+@media only screen and (min-width: 1000px)  {
+  /* Desktop: Horizontal row layout */
 .columns{
 display: flex;
 width: 100%;
 flex-direction: row;
 flex-wrap: nowrap;
-gap: var(--space-m);  
+gap: var(--space-m);
 }
+
+  /* Desktop: Column children */
   .columns > * {
   display: flex;
   flex-direction: column;
   }
+
+/* Even Columns - Equal width distribution */
 .columns--even > *  {
  display: flex;
  flex: 1 1 300px;
 }
+
+/* Centered Columns - Center content vertically and horizontally */
 .columns--centered > *{
   align-items: center;
   justify-content: center;
   }
+
+/* Sidebar Left Layout - Narrow left sidebar, wide right content */
 .columns--sidebar-left > *:first-child {
 display: flex;
 flex: 1 1 30%;
 min-width: 220px;
 }
+
 .columns--sidebar-left > *:last-child{
 display: flex;
 flex: 1 1 60%;
 }
-  /*Sidebar right*/
+
+/* Sidebar Right Layout - Wide left content, narrow right sidebar */
   .columns--sidebar-right > *:first-child {
   display: flex;
   flex: 1 1 70%;
   }
+
   .columns--sidebar-right > *:last-child{
   display: flex;
   flex: 1 1 25%;
   min-width: 220px;
   }
+
+  /* Sidebar Container - Styled sidebar content wrapper */
   .sidebar__container {
   display: flex;
   flex-direction: column;
@@ -58,38 +82,63 @@ flex: 1 1 60%;
   gap: var(--space-l);
   }
 }
-/*clickable parents*/
+
+/* ========================================
+   CLICKABLE PARENT UTILITY
+   ======================================== */
+
+/* Clickable Parent - Makes entire container clickable via nested link */
 .clickable-parent {
   position: relative;
 }
+/* Link on top for clicking */
 .clickable-parent a {
-    z-index: 10; /* Ensure the link is on top for clicking */
+    z-index: 10;
 }
+
+/* Pseudo-element overlay to make entire parent clickable */
 .clickable-parent a::before{
   position:  absolute;
   content:  '';
   inset:  0;
   z-index:  5;
 }
- /* remove lsit style from list */
+
+/* ========================================
+   LIST STYLE RESET
+   ======================================== */
+
+/* Remove default list styles (bullets, padding, margin) */
 .no-list-style{
   margin: unset;
   padding: unset;
   list-style: none;
 }
 
-/* remove scrollbar for overflow scroll */
+/* ========================================
+   SCROLLBAR HIDING
+   ======================================== */
+
+/* Hide scrollbar while keeping scroll functionality */
 .hide-scroll-bar{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.hide-scroll-bar::-webkit-scrollbar{ 
-    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scroll-bar::-webkit-scrollbar{
+    display: none;
 }
-/* overlay */
+
+/* ========================================
+   OVERLAY UTILITIES
+   ======================================== */
+
+/* Light Overlay - Adds semi-transparent light background layer */
 .overlay-light{
   position: relative;
 }
+
 .overlay-light:after{
   content: '';
   inset: 0;
@@ -97,27 +146,43 @@ flex: 1 1 60%;
   background: var(--col-light--70);
   z-index: -1;
 }
-/* background image */
+
+/* ========================================
+   BACKGROUND IMAGE UTILITY
+   ======================================== */
+
+/* Background Image Container */
 .bg-img{
   position: relative;
 }
+
+/* Background Image Wrapper - Positioned behind content */
   .bg-img__img{
     position: absolute;
     content: '';
     inset: 0;
     z-index: -2;
   }
+
+  /* Background Image - Full cover */
     .bg-img__img img{
       height: 100%;
       width: 100%;
       object-fit: cover;
       object-position: center;
     }
-/* Vertical divider between 2 text elements */
+
+/* ========================================
+   DIVIDER UTILITIES
+   ======================================== */
+
+/* Vertical Divider - Adds line after first element */
 .divider{
   --gap: var(--space-m);
   gap: var(--gap);
 }
+
+/* Divider Line - Creates horizontal line separator */
 .divider > *:first-child::after {
   content: '';
   display: block;
@@ -127,27 +192,42 @@ flex: 1 1 60%;
   background: var(--col-light--70);
   transform: translateY(calc(var(--gap) / 2));
 }
+
+/* Accent Divider - Uses accent color for divider line */
 .divider--accent > *:first-child::after{
   background: var(--col-accent) ;
 }
-/* Double heading */
+
+/* ========================================
+   DOUBLE HEADING UTILITY
+   ======================================== */
+
+/* Double Heading - Two-line heading with different sizes */
 .h-double{
   display: flex;
 }
+
+/* Double Heading Line Height */
 .h-double > * {
   line-height: 1.2em;
-  
 }
+
+/* Double Heading with H1 - Largest size */
 .h-double:has(h1){
   font-size: var(--fs-6);
 }
+
+/* Double Heading with H2 - Large size */
 .h-double:has(h2){
   font-size: var(--fs-5);
 }
+
+/* Second line smaller text */
   .h-double > *:last-child{
     font-size: .6em;
-
   }
+
+/* Double Heading Reverse - Second line on top */
 .h-double--reverse{
   flex-direction: column-reverse;
 }

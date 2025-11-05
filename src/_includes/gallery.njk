@@ -1,9 +1,17 @@
+{# ============================================
+   GALLERY SECTION - Image gallery with masonry layout
+   ============================================ #}
 <section class="gallery">
   <div class="container">
+    {# Gallery Title - Uses galleryTitle from front matter or default "Gallery" #}
     <h2 class="gallery__title">{% if galleryTitle %}{{ galleryTitle }}{% else %}Gallery{% endif %}</h2>
+
+    {# Gallery Grid - Masonry layout with responsive columns #}
     <div class="gallery__grid">
+      {# Loop through galleryImages array from front matter #}
       {%- for image in galleryImages -%}
       <div class="gallery__item" data-index="{{ loop.index0 }}">
+        {# Gallery image with lazy loading for performance #}
         <img src="{{ image.src }}" alt="{% if image.alt %}{{ image.alt }}{% else %}Gallery image{% endif %}" loading="lazy">
       </div>
       {%- endfor -%}
@@ -11,12 +19,21 @@
   </div>
 </section>
 
-<!-- Lightbox -->
+{# ============================================
+   LIGHTBOX MODAL - Fullscreen image viewer
+   ============================================ #}
 <div class="lightbox" id="lightbox">
+  {# Close button #}
   <button class="lightbox__close" id="lightbox-close">&times;</button>
+
+  {# Previous image button #}
   <button class="lightbox__nav lightbox__prev" id="lightbox-prev">&lsaquo;</button>
+
+  {# Lightbox image container #}
   <div class="lightbox__content">
-    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <img class="lightbox__img" id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
   </div>
+
+  {# Next image button #}
   <button class="lightbox__nav lightbox__next" id="lightbox-next">&rsaquo;</button>
 </div>
