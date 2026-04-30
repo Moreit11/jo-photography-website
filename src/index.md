@@ -2,13 +2,14 @@
 layout: main.njk
 title: "Jo's photography website"
 permalink: /
-meta_title: "Nature Photographer in Dundee"
-meta_description: "Explore Jo's nature photography from Dundee, Scotland. Stunning landscapes, wildlife, and serene scenes captured with passion and precision."
+meta_title: "Wedding Photographer Dundee, Scotland | Jo Smith"
+meta_description: "Jo Smith is a wedding photographer based in Dundee, Scotland. Capturing authentic, emotional moments for couples across Tayside and the Scottish Highlands."
 templateEngineOverride: njk,md
-heroTitle: "Jo Smith Photography"
-heroSubtitle: "Capturing the Beauty of Nature in Dundee, Scotland"
-heroButton: "View Portfolio"
-heroButtonLink: "/portfolio"
+heroTitle: "Jo Smith Wedding Photography Dundee"
+heroSubtitle: "I capture unqique moments of your Dundee wedding. Get in touch to get a free quote for your wedding in Dundee"
+heroButton: "Get in touch"
+heroButtonLink: "/contact"
+heroImage: "/assets/media/wedding-photography-dundee.webp"
 galleryTitle: "Featured Work"
 galleryImages:
   - src: "/assets/media/castle-on-lake.webp"
@@ -26,3 +27,5 @@ galleryImages:
 ---
 
 {%- include "gallery.njk" -%}
+{%- include "testimonials.njk" -%}
+{%- include "contact.njk" -%}

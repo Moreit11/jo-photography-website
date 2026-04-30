@@ -1,7 +1,7 @@
 {# ============================================
    HERO SECTION - Full-screen hero banner with title, subtitle, and CTA
    ============================================ #}
-<section class="hero">
+<section class="hero"{% if heroImage %} style="background-image: url('{{ heroImage }}')"{% endif %}>
   <div class="hero__content">
     {# Hero Title - Uses heroTitle from front matter, otherwise page title #}
     <h1 class="hero__title">{% if heroTitle %}{{ heroTitle }}{% else %} {{title}} {% endif %}</h1>
