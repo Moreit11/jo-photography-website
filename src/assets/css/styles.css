@@ -65,11 +65,14 @@ body{
     color: var(--col-dark);
     background: var(--col-light)
 }
-
+p a{ color: var(--col-primary); text-decoration: underline;}
 /* Section - Consistent padding across all page sections */
 section{
   padding: var(--section-pad-ver) var(--section-pad-hor);
 }
+
+.py-section{ padding-top: var(--section-pad-ver); padding-bottom: var(--section-pad-ver)}
+.py-section{ padding-right: var(--section-pad-hor); padding-left: var(--section-pad-hor)}
 
 /* Container - Content wrapper with max width */
 .container{
@@ -1104,4 +1107,10 @@ section{
 .splide__pagination__page.is-active {
     background: var(--col-primary);
     transform: scale(1.2);
+}
+
+/* Vertical padding for carousel track */
+.testimonials__carousel .splide__track {
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-xl);
 }

@@ -17,6 +17,10 @@ export default function(eleventyConfig) {
   eleventyConfig.ignores.add("src/assets/css/utility.css");
   eleventyConfig.ignores.add("src/assets/css/styles.css");
 
+  // Watch CSS files so changes trigger a rebuild
+  eleventyConfig.addWatchTarget("./src/assets/css/");
+  eleventyConfig.addWatchTarget("./src/assets/tailwind/");
+
   // Process CSS with PostCSS and Tailwind
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {

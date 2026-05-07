@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 perMove: 1,
                 gap: '2rem',
                 padding: '1rem',
+                arrows: false,
                 autoplay: true,
                 interval: 5000,
                 pauseOnHover: true,

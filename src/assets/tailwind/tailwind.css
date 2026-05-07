@@ -1,18 +1,6 @@
-/* ========================================
-   TAILWIND CSS MAIN FILE
-   ======================================== */
+@import "../css/styles.css";
+@import "../css/utility.css";
 
-/* Import custom utility classes */
-@import '../css/utility.css';
-
-/* Import main styles and component styles */
-@import '../css/styles.css';
-
-/* Tailwind CSS base styles - CSS reset and base element styles */
 @tailwind base;
-
-/* Tailwind CSS component classes - Reusable component utilities */
 @tailwind components;
-
-/* Tailwind CSS utility classes - Atomic utility classes for rapid styling */
 @tailwind utilities;
