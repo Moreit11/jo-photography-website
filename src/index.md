@@ -35,5 +35,6 @@ galleryImages:
 ---
 
 {%- include "gallery.njk" -%}
+{%- include "work-with-me.njk" -%}
 {%- include "testimonials.njk" -%}
 {%- include "contact.njk" -%}
