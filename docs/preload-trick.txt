@@ -1,0 +1,80 @@
+The Preload Trick — Loading CSS Without Blocking Rendering
+
+Normal stylesheet links (<link rel="stylesheet">) block the browser from painting
+anything on screen until the file is fully downloaded. The preload trick loads a
+stylesheet in the background so the page can render immediately, then applies the
+CSS once it arrives.
+
+HOW IT WORKS
+
+<link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+1. rel="preload" — fetch the file now but do not apply it yet
+2. as="style"    — tells the browser it is a stylesheet so it handles it correctly
+3. onload        — fires when the download finishes and switches rel to "stylesheet",
+                   which applies the CSS to the page
+4. this.onload=null — clears the handler before switching rel, preventing an
+                      infinite loop in browsers that re-fire onload on rel change
+5. <noscript>    — fallback for users with JavaScript disabled, where the onload
+                   handler would never run
+
+WHEN TO USE IT
+
+Use for CSS that is not needed for the first visible paint:
+  - Web fonts (page renders with a fallback font, then swaps)
+  - Below-the-fold component styles (carousels, modals, sliders)
+  - Icon libraries
+
+Do not use for the main stylesheet — the browser needs that immediately
+to lay out and paint the page correctly.
+
+POSSIBLE ISSUES
+
+Flash of unstyled content (FOUC)
+  The stylesheet arrives after the page has already painted, so there is a brief
+  moment where the element looks unstyled. For fonts this appears as a font swap;
+  for a carousel it may flash as an unstyled list. Usually imperceptible on fast
+  connections but noticeable on slow ones.
+
+JavaScript dependency
+  The onload handler requires JavaScript. Without the <noscript> fallback, users
+  with JS disabled will never receive the stylesheet. Always include the fallback.
+
+Browser support edge cases
+  Older browsers (IE11, early Edge) do not support rel="preload". They will ignore
+  the tag entirely and the stylesheet will never load — even with JS enabled.
+  The <noscript> fallback does not help here. For those browsers a separate
+  polyfill (loadCSS) is needed if support matters.
+
+Incorrect as attribute
+  Omitting as="style" causes the browser to fetch the file at the wrong priority
+  and may trigger a second download when rel is switched to "stylesheet".
+
+Not a performance gain for critical CSS
+  If the stylesheet controls above-the-fold layout, deferring it makes things
+  worse — the browser has to repaint after it arrives, causing layout shift.
+
+ALTERNATIVES
+
+Media print trick (no JavaScript required)
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  The browser fetches print stylesheets without blocking rendering. Switching media
+  to "all" via onload applies it. Simpler than the preload trick but relies on the
+  same onload handler, so still needs a <noscript> fallback.
+
+Inline critical CSS
+  Extract only the CSS needed for the first visible screen and paste it into a
+  <style> block in the <head>. Load the full stylesheet asynchronously or defer it.
+  Eliminates FOUC for critical styles entirely. Harder to maintain as styles change.
+
+Self-hosting fonts
+  Download font files and serve them from your own domain. Removes the external
+  Google Fonts request entirely — no preload trick needed, no third-party latency,
+  and no privacy concern from Google tracking font loads. Requires storing font
+  files in the project and writing @font-face rules in CSS.
+
+HTTP/2 Server Push (mostly deprecated)
+  The server pushes CSS to the browser before it is requested. Largely abandoned
+  because browsers often already had the file cached, causing wasted transfers.
+  Most CDNs have removed support.
