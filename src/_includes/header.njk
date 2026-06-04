@@ -12,16 +12,16 @@
         </div>
 
         {# Primary Navigation - Generated from Eleventy navigation plugin #}
-        <nav id="primary-nav" class="primary-nav">
+        <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
             {# Auto-generated navigation menu from page front matter #}
             {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 
             {# Hamburger Menu Button - Mobile navigation toggle #}
-            <button id="nav-btn" class="primary-nav__btn">
+            <button id="nav-btn" class="primary-nav__btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
                 <span class="nav-btn__bar"></span>
                 <span class="nav-btn__bar"></span>
                 <span class="nav-btn__bar"></span>
-        </button>
+            </button>
         </nav>
     </div>
 </header>

@@ -10,9 +10,10 @@ function initMenu(){
     const button = document.getElementById("nav-btn")
     if (button && menu) {
         button.addEventListener('click', () => {
+            const isOpen = menu.classList.toggle('open')
             button.classList.toggle('open')
-            menu.classList.toggle('open')
-            console.log("clicked")
+            button.setAttribute('aria-expanded', isOpen)
+            button.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu')
         })
     }
 }

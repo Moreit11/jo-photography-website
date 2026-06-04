@@ -1,5 +1,6 @@
 //Navigation plugin eleventy https://www.11ty.dev/docs/plugins/navigation/
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import Image from "@11ty/eleventy-img";
 import postcss from "postcss";
 import postcssImport from "postcss-import";
 import tailwindcss from "tailwindcss";
@@ -40,6 +41,23 @@ export default function(eleventyConfig) {
       }
       return async () => inputContent;
     }
+  });
+
+  // Responsive image shortcode — generates 400/800/1200w WebP versions at build time
+  eleventyConfig.addShortcode("galleryImage", async function(src, alt) {
+    const imagePath = path.join(__dirname, "src", src);
+    const metadata = await Image(imagePath, {
+      widths: [400, 800, 1200],
+      formats: ["webp"],
+      outputDir: "./_site/assets/media/",
+      urlPath: "/assets/media/",
+    });
+    return Image.generateHTML(metadata, {
+      alt: alt || "",
+      sizes: "(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px",
+      loading: "lazy",
+      decoding: "async",
+    });
   });
 
   // Copy other assets but exclude the tailwind source file

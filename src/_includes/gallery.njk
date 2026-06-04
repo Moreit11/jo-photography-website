@@ -11,8 +11,7 @@
       {# Loop through galleryImages array from front matter #}
       {%- for image in galleryImages -%}
       <div class="gallery__item" data-index="{{ loop.index0 }}">
-        {# Gallery image with lazy loading for performance #}
-        <img src="{{ image.src }}" alt="{% if image.alt %}{{ image.alt }}{% else %}Gallery image{% endif %}" loading="lazy">
+        {% galleryImage image.src, image.alt %}
       </div>
       {%- endfor -%}
     </div>
